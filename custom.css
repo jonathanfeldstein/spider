@@ -1,0 +1,12 @@
+.navbar {
+	//background-color: rgba(20, 20, 20, .9);
+	border: 0;
+	box-shadow: 0 1em 3em -1em rgba(0,0,0,.5);
+}
+
+.navbar-brand img{
+	//font-family: Blackfat;
+	//font-size: 2em;
+	height: 40px;
+	margin-top: -10px;
+}
