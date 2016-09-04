@@ -6,10 +6,22 @@
     <artifactId>gs-maven</artifactId>
     <packaging>jar</packaging>
     <version>0.1.0</version>
-
+ 	
+	<repositories>
+		<repository>
+			<id>JBoss repository</id>
+			<url>http://repository.jboss.org/nexus/content/groups/public/</url>
+		</repository>
+	</repositories>
 
   <dependencyManagement>
     <dependencies>
+	<dependency>
+<!-- Doesnt find package -->
+    		<groupId>javax</groupId>
+	    	<artifactId>javaee-api</artifactId>
+	    	<version>7.0</version>
+	</dependency>
         <dependency>
             <groupId>org.hibernate.ogm</groupId>
             <artifactId>hibernate-ogm-bom</artifactId>
@@ -25,11 +37,6 @@
      	    <groupId>org.jboss.jbossts</groupId>
     	    <artifactId>jbossjta</artifactId>
     	</dependency>
-	<dependency>
-	  <groupId>javax.persistence</groupId>
-	  <artifactId>persistence-api</artifactId>  
-	  <version>1.0.2</version>
-	</dependency>
     </dependencies>
 
   </dependencyManagement>

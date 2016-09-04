@@ -1,25 +1,22 @@
 package ContactifyBackend;
-
-import javax.persistence.ElementCollection;
-import javax.persistence.Entity;
-import javax.persistence.Id;
 import java.util.ArrayList;
 import java.util.List;
-
+import javax.persistence.*;
+	
 @Entity
 public class Contact {
 
-	@id
+	@Id
 	private String number;
 
 	private String firstName, lastName;
 	private String password;
 
 	@ElementCollection
-	private List<ExtraInformation> extraFields = new ArrayList<>(); 
+	private List<ExtraInformation> extraFields = new ArrayList<ExtraInformation>(); 
 
 	@ElementCollection
-	private List<RelationShip> relations = new ArrayList<>();
+	private List<RelationShip> relations = new ArrayList<RelationShip>();
 
 	public Contact(String number, String firstName, String lastName, String password) {
 		this.number = number;

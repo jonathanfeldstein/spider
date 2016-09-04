@@ -1,14 +1,15 @@
 package ContactifyBackend;
 
+
 import java.util.ArrayList;
 import java.util.List;
-import javax.persistence.Embeddable;
+import javax.persistence.*;
 
 @Embeddable
 public class RelationShip {
 
     	private String category;
-    	private List<String> persons=new ArrayList<>();
+    	private List<String> persons=new ArrayList<String>();
 	
 	public RelationShip(String category, List<String> persons){
 		this.category = category;
