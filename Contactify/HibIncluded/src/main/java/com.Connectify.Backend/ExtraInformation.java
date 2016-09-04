@@ -1,5 +1,4 @@
-package ContactifyBackend;
-
+package com.Contactify.Backend;
 
 import java.util.ArrayList;
 import java.util.List;
