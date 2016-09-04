@@ -1,0 +1,42 @@
+@Entity
+public class Contact {
+
+	@id
+	@Column(name = "phoneNumber")
+	private String id;
+
+	private String firstName;
+	private String lastName;
+	private String password;
+
+	@OneToMany
+	private List<ExtraInformation> extraInformations = new ArrayList<>();
+
+	@OneToMany
+	private List<RelationsShip> relationShips = new ArrayList<>();
+
+	public Contact(String number, String firstn, String lastn, String pas){
+		id=number;
+		firstName = firstn;
+		lastName = lastn;
+		password = pas;
+		
+	}
+}
+
+
+@Embeddable
+public class ExtraInformation {
+
+    private String category;
+    private List<String> elements = new ArrayList<>();
+//const
+}
+
+@Embeddable
+public class RelationShop {
+
+    private String name;
+    private List<String> elements = new ArrayList<>();
+//const
+}
