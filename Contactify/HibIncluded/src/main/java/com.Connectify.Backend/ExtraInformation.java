@@ -4,13 +4,20 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.*;
 
-@Embeddable
+//not good
+@Entity
 public class ExtraInformation {
-
+	@Id
+	private String number;
+	
+ 	@Column
     	private String category;
+	
+	@ElementCollection
     	private List<String> data=new ArrayList<String>();;
 	
-	public ExtraInformation(String category, List<String> data){
+	public ExtraInformation(String number, String category, List<String> data){
+		this.number=number;
 		this.category = category;
 		this.data = data;
 	}	

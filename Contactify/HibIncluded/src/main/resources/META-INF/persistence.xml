@@ -5,15 +5,15 @@
     xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
     version="2.0">
 
-    <persistence-unit name="contactPU" transaction-type="RESOURCE_LOCAL">
+    <persistence-unit name="com.Contactify.Backend">
         <provider>org.hibernate.ogm.jpa.HibernateOgmPersistence</provider>
 
         <properties>
     		<property name="hibernate.ogm.datastore.provider" value="mongodb" />
-    		<property name="hibernate.ogm.datastore.database" value="" />
-    		<property name="hibernate.ogm.datastore.host" value="" />
-    		<property name="hibernate.ogm.datastore.username" value="" />
-    		<property name="hibernate.ogm.datastore.password" value="!" />
+    		<property name="hibernate.ogm.datastore.database" value="contactdb" />
+    		<property name="hibernate.ogm.datastore.host" value="127.0.0.1" />
+    		<property name="hibernate.ogm.datastore.username" value="usr" />
+    		<property name="hibernate.ogm.datastore.password" value="password" />
 	</properties>
     </persistence-unit>
 </persistence>

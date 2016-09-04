@@ -4,13 +4,19 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.*;
 
-@Embeddable
+@Entity
 public class RelationShip {
+	@Id
+	private String number;
 
+	@Column
     	private String category;
+
+	@ElementCollection
     	private List<String> persons=new ArrayList<String>();
 	
-	public RelationShip(String category, List<String> persons){
+	public RelationShip(String number, String category, List<String> persons){
+		this.number = number;
 		this.category = category;
 		this.persons = persons;
 	}

@@ -5,8 +5,9 @@ import java.util.Map;
 import javax.persistence.*;
 
 public class ContactManager {
-	private EntityManagerFactory entityManagerFactory = Persistence
-			.createEntityManagerFactory("contactPU");
+	public ContactManager(){}
+	private static final EntityManagerFactory entityManagerFactory = Persistence
+			.createEntityManagerFactory("com.Contactify.Backend");
 
 	public void createContact(Contact contact) {
 		Contact newCon = contact;
@@ -23,6 +24,10 @@ public class ContactManager {
 
 	}
 
+public void closeFactory(){
+entityManagerFactory.close();
+}
+
 	public void editContact(String number, Contact changedContact) {
 		// better use of EM
 		if (numberUsed(number)) {
@@ -35,10 +40,10 @@ public class ContactManager {
 		EntityManager entityManager = entityManagerFactory
 				.createEntityManager();
 		entityManager.getTransaction().begin();
+		Contact c = getContact(number);
 
 		if (numberUsed(number))
-			entityManager.remove(getContact(number));
-
+			entityManager.remove(entityManager.contains(c) ? c : entityManager.merge(c));
 		entityManager.getTransaction().commit();
 		entityManager.close();
 

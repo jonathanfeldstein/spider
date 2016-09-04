@@ -9,5 +9,15 @@ public class Main {
 	ExtraInformation e = new ExtraInformation("Hobby");
 	e.addData("Fighting");
 	e.addData("Coding");
+	ContactManager cm = new ContactManager();
+	cm.createContact(c);
+	cm.deleteContact(c.getNumber());
+	c.setFirstName("Lasse Rolf");
+	cm.createContact(c);
+	c = new Contact("123456","Jonathan","Feldstein","123456issafe");
+	cm.createContact(c);
+	c.setPassword("123456");
+	cm.editContact("123456",c);
+cm.closeFactory();
     }
 }
