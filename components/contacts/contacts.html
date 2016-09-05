@@ -1,0 +1,43 @@
+<!-- Navigationbar of Contactbook -->
+<nav class="navbar">
+    <div class="container-fluid">
+    
+    <!-- Toggle in case of SMALL device -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#searchbar">
+        <span class="caret"></span>
+      </button>
+    </div>
+    </div>
+    <div class="collapse navbar-collapse" id="searchbar">
+      <!-- Different buttons of navigationbar -->
+      <ul class="nav navbar-nav">
+        <li><a href="#" id="addButton" data-toggle="modal" data-target="#addContactmodal">Add</a></li>
+        <li><a href="#" class="divider"></a></li>
+        <li><a href="#" id="sortFirstButton" data-toggle="modal" data-target="#login-modal" ng-click="sortBy('firstname')">Sort by First Name</a></li>
+        <span class="sortorder" ng-show="propertyName === 'firstname'" ng-class="{reverse: reverse}"></span>
+        <li><a href="#" class="divider"></a></li>
+        <li><a href="#" id="sortLastButton" data-toggle="modal" data-target="#login-modal" ng-click="sortBy('lastname')">Sort by Last Name</a></li>
+        <span class="sortorder" ng-show="propertyName === 'lastname'" ng-class="{reverse: reverse}"></span>
+        <li><a href="#" class="divider"></a></li>
+        <li class="searchButton"><input type="text" placeholder="Search" name="search" style="border:none; text-align:center"></li>
+      </ul>
+    </div>
+</nav>
+	<!-- Directive for modal-form to add Contact -->
+		<add-contact submit-func='postContact'></add-contact>
+
+<!-- Space between navigationbar and Contactlist -->
+<div class="spacer"></div>
+<!-- Contactlist -->
+<div class="main">
+      <div class="container">
+         <!-- Add all contacts from contactlist -->
+         <div class="singleContact" ng-repeat="contact in contacts">
+			   
+			   <!-- Single Contact from Contactlist -->
+				<contact-info contact="contact" ></contact-info>
+
+        </div>
+      </div>
+</div>

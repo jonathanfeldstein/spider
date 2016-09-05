@@ -1,0 +1,66 @@
+ <div class="modal fade" dismiss-modal id="addContactmodal" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+    <!--Titel of modal --> 
+      <div class="modal-header">
+        <h4>Add Contact</h4>
+      </div>
+
+      <!-- Form -->
+      <div class="modal-body">
+        <form role="form" name="addContactform" novalidate>
+           <!-- Part I Company--> 
+            <div class="form-group">
+                <label for="add-form-comp">Company</label>
+                <!-- ng-model makes it possible to directly POST content to server -->
+                <input type="text" class="form-control" id="add-form-comp" placeholder="Company" ng-model="contact.company" name="company">
+            </div>
+            <!-- Part II Name-->
+            <div class="form-group">
+                <label for="add-form-first-name">Name</label>
+                <select class="form-control" ng-model="contact.title" name="name_title">
+                    <option>Mr.</option>
+                    <option>Mrs.</option>
+                    <option>Ms.</option>
+                    <option>Dr.</option>
+                    <option>Prof. Dr.</option>
+                </select>
+                <br>
+                <input type="text" class="form-control" id="add-form-first-name" placeholder="First" ng-model="contact.firstname" name="firstname"><br>
+                <input type="text" class="form-control" id="add-form-last-name" placeholder="Last" ng-model="contact.lastname" name="lastname">
+            </div>
+
+            <!-- Part III Phone number= ID -->
+            <div class="form-group">
+               <label for="add-form-id">Phone number</label>
+                <input type="text" class="form-control" id="add-form-last-name" placeholder="mobile phone number" ng-model="contact.id" name="addee_id">
+            </div>
+
+            <!-- Part IV Address -->
+            <div class="form-group">
+                <label for="add-form-addr">Address</label>
+                <input type="text" class="form-control" id="add-form-addr" placeholder="Address Line" ng-model="contact.address" name="address"><br>
+                <input type="text" class="form-control" id="add-form-postal" placeholder="Zip Code" ng-model="contact.zipcode" name="zipcode"><br>
+                <input type="text" class="form-control" id="add-form-addr" placeholder="City" ng-model="contact.city" name="city"><br>
+                <input type="text" class="form-control" id="add-form-addr" placeholder="Country" ng-model="contact.country" name="country">
+            </div>
+
+            <!-- Part V Email -->
+            <div class="form-group">
+                <label for="add-form-user">E-Mail</label>
+                <input type="email" class="form-control" id="add-form-user" ng-model="contact.mailaddr" name="mailaddr">
+            </div>  
+
+            <!-- Add OR Cancel -->
+            <button type="submit" class="btn btn-success pull-left" name="submit" ng-click="submitWrapper(contact)">Add</button>
+            <button type="submit" class="btn btn-danger btn-default pull-right" data-dismiss="modal">
+                    <span class="glyphicon glyphicon-remove"></span> Cancel
+            </button>
+        </form>
+        <br>
+      </div>
+    </div>
+  </div>
+</div>

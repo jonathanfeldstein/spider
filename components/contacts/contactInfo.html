@@ -1,0 +1,65 @@
+<li class="list-group-item">   
+    <div class="grow">
+              <div class="userContact">
+              <a href="#">{{contact.firstname}} {{contact.lastname}}</a>
+              </div>
+              <div class="additionalInformation">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <a href="#">Information</a>
+                    <div class="spacersmall"></div>
+                    <div class="details">
+                      <div class="row">
+
+                        <div class="col-sm-2">
+                          <div class="contactPic">
+                            <img ng-src="{{ contact.image }}" class="img-circle person" alt="Random Name">
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div class="contactInfo">
+                            <div class="contactCompany">{{contact.company}}</div>
+                            <div class="spacersmall"></div>
+                            <div class="contactPhone">{{contact.id}}</div>
+                            <div class="spacersmall"></div>
+                            <div class="contactMail">{{contact.mail}}</div>
+                            <div class="spacersmall"></div>
+                            <div class="contactAdress">{{contact.address}}</div>
+                            <div class="contactCity">{{contact.city}}</div>
+                            <div class="contactCountry">{{contact.country}}</div>
+                          </div>
+                        </div>
+                      </div>
+                      </div>
+                  </div>
+                  <div class="col-sm-10">
+                    <a href="#">Last Message</a>
+                    <div class="spacersmall"></div>
+                    <div class="details">
+                      <div class="lastMessage">{{contact.lastmessage}}</div>
+                    </div>
+                  </div>
+                  <div class="col-sm-2">
+                    <div class="meeting">
+                    <a href="#">Last Meeting 
+                    </a>
+                    <div class="spacer"></div>
+                    <div class="spacer"></div>
+                    <a href="#">Next Meeting 
+                    </a>
+                    </div>
+                  </div>
+                  <div class="col-sm-2">
+                     <div class="details">
+                      <div class="lastMeeting">{{contact.lastmeeting | date}}</div>
+                      <div class="spacer"></div>
+                      <div class="spacer"></div>
+                      <div class="nextMeeting">{{contact.nextmeeting | date}}</div>
+                     </div>
+                  </div>
+                </div>
+              </div>
+    </div>
+
+    <div style="clear: left;"></div>
+</li>
