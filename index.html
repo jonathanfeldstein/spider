@@ -14,10 +14,13 @@
     <!-- Include Stylesheets -->
         <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Open+Sans'>
     		<link rel='stylesheet' type='text/css' href='css/main.css'>
+
 		
     <!-- Include Bootstrap and jQuery -->
         <link rel='stylesheet' type='text/css' href='bootstrap/css/bootstrap.min.css'>
-        
+      <!-- CSS Sheet to customize bootstrap -->
+        <link rel='stylesheet' type='text/css' href='bootstrap/css/custom.css'>
+
     		<script src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js'></script>
     		<script src='bootstrap/js/bootstrap.min.js'></script> 
 
@@ -31,6 +34,10 @@
 
     <!-- Include Own Angular -->
     		<script src='app.js'></script>
+    <!-- Angular for Home -->
+        <script src='components/home/homeController.js'></script>
+        <script src="components/home/companyController.js"></script>
+    <!-- Angular for Contacts -->
     		<script src='components/contacts/contactsController.js'></script>
     		<script src='components/contacts/contactInfo.js'></script>
         <script src='components/contacts/contactTotal.js'></script>
@@ -55,7 +62,7 @@
               </button>
             <!-- Company logo = Home Button -->
               <div class="homebutton">
-                <a class="navbar-brand" href="index.php"><img src="res/logo/main-450.png"/></a>
+                <a class="navbar-brand" href="#/home"><img src="res/logo/main-450.png"/></a>
               </div>
 
           </div>
@@ -65,13 +72,13 @@
             <!-- Company Information Navigation -->
               <ul class="nav navbar-nav navbar-left">
                 <li class="dropdown">
-                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">COMPANY
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#/company">COMPANY
                     <span class="caret"></span>
                   </a>
                   <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-                    <li><a href="company.php">General</a></li>
-                    <li><a href="company.php#team">Team</a></li>
-                    <li><a href="company.php#location">Contact us</a></li>
+                    <li><a href="#/company">General</a></li>
+                    <li><a href="#/company/#team">Team</a></li>
+                    <li><a href="#/company/#location">Contact us</a></li>
                   </ul>
                 </li>
               </ul>

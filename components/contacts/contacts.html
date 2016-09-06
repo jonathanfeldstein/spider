@@ -27,19 +27,14 @@
 	<!-- Directive for modal-form to add Contact -->
 		<add-contact submit-func='postContact'></add-contact>
   <!-- Search Modal -->
-  <div id="searchContact" class="modal fade" role="dialog">
-  <div class="modal-dialog">
+  <div id="searchContact" class="modal" role="dialog">
+    <div class="modal-dialog" >
 
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-body" >
         <form role="form" name="searchForm">
-            <input type="text" class="form-control" id="searchContactBox" ng-model="search.$" placeholder="Search" name="search">
+            <input type="text" class="form-control" id="searchContactBox"  ng-model="search.$" placeholder="Search" name="search">
         </form>
-      </div>
-    </div>
 
-  </div>
+    </div>
   </div>
 
 
