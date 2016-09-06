@@ -1,0 +1,6 @@
+com/connectify/backend/models/Contact.class
+com/connectify/backend/resources/ContactRestService.class
+com/connectify/backend/models/ExtraInformation.class
+com/connectify/backend/models/ContactManager.class
+com/connectify/backend/models/Main.class
+com/connectify/backend/models/RelationShip.class
