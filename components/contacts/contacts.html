@@ -20,7 +20,7 @@
         <li><span  id="sortLastButton" data-toggle="modal" data-target="#login-modal" ng-click="sortBy('lastname')">Last Name</span></li>
         <span class="sortorder" ng-show="propertyName === 'lastname'" ng-class="{reverse: reverse}"></span>
         <li><a class="divider"></a></li>
-        <li><span class="searchButton" data-toggle="modal" data-target="#searchContact">Search</span><span class="glyphicon glyphicon-search searchButton"></span></li>
+        <li><div class="searchButton" data-toggle="modal" data-target="#searchContact">Search<span class="glyphicon glyphicon-search searchButton"></span></div></li>
       </ul>
     </div>
 </nav>
@@ -33,8 +33,8 @@
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-body" >
-        <form role="form" name="searchForm" novalidate>
-            <input type="text" class="form-control" id="searchContactBox" placeholder="Search" name="search">
+        <form role="form" name="searchForm">
+            <input type="text" class="form-control" id="searchContactBox" ng-model="search.$" placeholder="Search" name="search">
         </form>
       </div>
     </div>
@@ -50,7 +50,7 @@
 <div class="main">
       <div class="container">
          <!-- Add all contacts from contactlist -->
-         <div class="singleContact" ng-repeat="contact in contacts">
+         <div class="singleContact" ng-repeat="contact in contacts | filter:search">
 			   
 			   <!-- Single Contact from Contactlist -->
 				<contact-info contact="contact" ></contact-info>

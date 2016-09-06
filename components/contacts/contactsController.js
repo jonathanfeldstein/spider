@@ -11,7 +11,7 @@ function ContactsController($scope, ContactsService, orderBy) {
 
       });
 
-    //Organize Information DOESNT WORK BITCHES, PROBLEM ON  SHOWING END, NOT in FCT
+    //Organize Information 
       
   $scope.sortBy = function(propertyName) {
     console.log(propertyName);
@@ -21,6 +21,7 @@ function ContactsController($scope, ContactsService, orderBy) {
     $scope.contacts = orderBy($scope.contacts, $scope.propertyName, $scope.reverse);
   
     };
+
 
   //POST information to server
     $scope.postContact = function (contact) {

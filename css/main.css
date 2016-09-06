@@ -48,6 +48,13 @@ body {
 	position: relative;
 	margin-top:80vh;
 }
+.spacer {
+	height: 25px;
+}
+
+.spacersmall {
+	height: 10px;
+}
 
 /******************************************************/
 /* PAGES */
@@ -67,6 +74,13 @@ line-height: 20px;
 	text-decoration: none;
 	background-color: #ccc;
 }
+#searchbar li div{
+	padding-left: 15px;
+}
+#searchbar li div:hover{
+	text-decoration: none;
+	background-color: #ccc;
+}
 .navbar-brand img{
 	//font-family: Blackfat;
 	//font-size: 2em;
@@ -81,13 +95,7 @@ line-height: 20px;
 	padding: 0;
 }
 
-.spacer {
-	height: 25px;
-}
 
-.spacersmall {
-	height: 10px;
-}
 #home {
 	background-color: rgba(255, 255, 255, .8);
 	padding: 2em;
@@ -160,11 +168,29 @@ line-height: 20px;
 .modal-header, .modal-body {
     padding: 3em;
 }
+
 /******************************************************/
 /* CONTACTS*/
 
 /* Alphabetic search */
-
+.modal-body .form-control #searchContactBox{
+	display: block;
+width: 100%;
+height: 34px;
+padding: 6px 12px;
+font-size: 14px;
+line-height: 1.42857143;
+color: white;
+background-color: white;
+background-image: none;
+border: white;
+border-radius: 4px;
+-webkit-box-shadow: inset 0 1px 1px white;
+box-shadow: white;
+-webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+-o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
 .letter{
 	min-height: 3.4vh;
 }
