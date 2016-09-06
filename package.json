@@ -1,9 +1,9 @@
 {
-  "name": "switchmanager",
-  "version": "1.0.0",
+  "name": "Contactify",
+  "version": "0.0.1",
   "description": "",
-  "repository": "",
-  "author": "Axel Martin <funkysayu@gmail.com>",
+  "repository": "https://github.com/jonaeth/ProjectC",
+  "author": "Jonathan Feldstein <feldstein@contactify.ch>",
   "dependencies": {
     "angular": "^1.5.0",
     "angular-animate": "^1.5.0",
@@ -12,6 +12,6 @@
     "angular-route": "^1.5.0",
     "angular-material-icons": "0.7.0"
   },
-  "license": "CC-BY-NC-SA-4.0"
+  "license": "Copyright-Contactify-2016"
 }
 

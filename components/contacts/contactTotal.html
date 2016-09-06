@@ -1,13 +1,18 @@
-<li class="list-group-item">   
-    <div class="grow">
-        <div class="userContact">
-            <span data-toggle="modal" data-target="{{ '#contact' + contact.id }}">{{contact.firstname}} {{contact.lastname}}</span>
+<div class="modal fade" id="{{ 'contact' + contact.id }}" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content contact-total">
+    <!--Titel of modal --> 
+        <div class="modal-header">
+            <h4 class="modal-title">{{contact.firstname}} {{contact.lastname}}</h4>
         </div>
-        <contact-total contact="contact"></contact-total>
-        <div class="additionalInformation">
+
+      <!-- Form -->
+        <div class="modal-body">
           <div class="row">
             <div class="col-sm-6">
-              <a href="#">Information</a>
+              <span>Information</span>
               <div class="spacersmall"></div>
               <div class="details">
                 <div class="row">
@@ -34,7 +39,7 @@
                 </div>
             </div>
             <div class="col-sm-10">
-              <a href="#">Last Message</a>
+              <span>Last Message</span>
               <div class="spacersmall"></div>
               <div class="details">
                 <div class="lastMessage">{{contact.lastmessage}}</div>
@@ -42,12 +47,10 @@
             </div>
             <div class="col-sm-2">
               <div class="meeting">
-              <a href="#">Last Meeting 
-              </a>
+              <span>Last Meeting </span>
               <div class="spacer"></div>
               <div class="spacer"></div>
-              <a href="#">Next Meeting 
-              </a>
+              <span>Next Meeting </span>
               </div>
             </div>
             <div class="col-sm-2">
@@ -60,7 +63,10 @@
             </div>
           </div>
         </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
     </div>
+</div>
 
-    <div style="clear: left;"></div>
-</li>

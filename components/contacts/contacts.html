@@ -12,14 +12,14 @@
     <div class="collapse navbar-collapse" id="searchbar">
       <!-- Different buttons of navigationbar -->
       <ul class="nav navbar-nav">
-        <li><a href="#" id="addButton" data-toggle="modal" data-target="#addContactmodal">Add</a></li>
-        <li><a href="#" class="divider"></a></li>
-        <li><a href="#" id="sortFirstButton" data-toggle="modal" data-target="#login-modal" ng-click="sortBy('firstname')">Sort by First Name</a></li>
+        <li><span id="addButton" data-toggle="modal" data-target="#addContactmodal">Add</span></li>
+        <li><a class="divider"></a></li>
+        <li><span  id="sortFirstButton" data-toggle="modal" data-target="#login-modal" ng-click="sortBy('firstname')">Sort by First Name</span></li>
         <span class="sortorder" ng-show="propertyName === 'firstname'" ng-class="{reverse: reverse}"></span>
-        <li><a href="#" class="divider"></a></li>
-        <li><a href="#" id="sortLastButton" data-toggle="modal" data-target="#login-modal" ng-click="sortBy('lastname')">Sort by Last Name</a></li>
+        <li><a class="divider"></a></li>
+        <li><span  id="sortLastButton" data-toggle="modal" data-target="#login-modal" ng-click="sortBy('lastname')">Sort by Last Name</span></li>
         <span class="sortorder" ng-show="propertyName === 'lastname'" ng-class="{reverse: reverse}"></span>
-        <li><a href="#" class="divider"></a></li>
+        <li><a class="divider"></a></li>
         <li class="searchButton"><input type="text" placeholder="Search" name="search" style="border:none; text-align:center"></li>
       </ul>
     </div>
@@ -29,6 +29,7 @@
 
 <!-- Space between navigationbar and Contactlist -->
 <div class="spacer"></div>
+<div class="spacersmall"></div>
 <!-- Contactlist -->
 <div class="main">
       <div class="container">

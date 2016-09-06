@@ -56,7 +56,17 @@ body {
 	border: 0;
 	box-shadow: 0 1em 3em -1em rgba(0,0,0,.5);
 }
+#searchbar span{
+position: relative;
+display: inline-block;
+padding: 15px 15px;
+line-height: 20px;
 
+}
+#searchbar li span:hover{
+	text-decoration: none;
+	background-color: #eee;
+}
 .navbar-brand img{
 	//font-family: Blackfat;
 	//font-size: 2em;
@@ -124,7 +134,13 @@ body {
 #products .description {
 	margin: 10%;
 }
+/******************************************************/
+/* MODAL COMPLETE CONTACT INFORMATION */
 
+.contact-total span{
+	font-weight: bold;
+}
+/******************************************************/
 /******************************************************/
 /* LOGIN & REGISTER */
 
