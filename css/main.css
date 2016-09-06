@@ -65,7 +65,7 @@ line-height: 20px;
 }
 #searchbar li span:hover{
 	text-decoration: none;
-	background-color: #eee;
+	background-color: #ccc;
 }
 .navbar-brand img{
 	//font-family: Blackfat;
@@ -135,10 +135,16 @@ line-height: 20px;
 	margin: 10%;
 }
 /******************************************************/
-/* MODAL COMPLETE CONTACT INFORMATION */
+/* MODALs Contact */
 
+/*COMPLETE CONTACT INFORMATION*/
 .contact-total span{
 	font-weight: bold;
+}
+/* Search Box*/
+.form-control #searchContactBox input{
+	border:none;
+	box-shadow: none;
 }
 /******************************************************/
 /******************************************************/
@@ -173,8 +179,9 @@ ul.nav li.dropdown:hover ul.dropdown-menu{
     padding-top: 10px;
   
 }
-.grow:hover {
-    height: 250px; /* This is the height on hover */
+
+.meeting{
+	box-sizing: inherit;
 }
 .userContact{
 	font-size: 20px;
@@ -195,11 +202,9 @@ ul.nav li.dropdown:hover ul.dropdown-menu{
 
 }
 .contactPic img{
-	max-width: 10vw;
+	max-width: 5vw;
 }
-.contactInfo {
-	padding-left: 10vw;
-}
+
 .sortBy{
 	position: fixed;
 	margin-top: 0px;
@@ -219,9 +224,7 @@ ul.nav li.dropdown:hover ul.dropdown-menu{
 	font-weight: bold;
 }
 .searchButton{
-	margin-bottom: 15px;
-	margin-top: 15px;
-	font-weight: normal;
+
 }
 #allContacts{
 	position: relative;
