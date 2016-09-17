@@ -58,7 +58,7 @@ body {
 
 /******************************************************/
 /* PAGES */
-.active {
+#searchbar .active  {
   background-color: #ccc;
 }
 .filter li {
