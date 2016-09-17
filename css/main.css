@@ -58,24 +58,40 @@ body {
 
 /******************************************************/
 /* PAGES */
-
-#searchbar span{
+.active {
+  background-color: #ccc;
+}
+.filter li {
+  display: inline;
+}
+ul .filter{
+	margin-top: 15px;
+}
+#searchbar .letters{
+	padding: 0 7px 0 7px;
+	font-family: Helvetica;
+  	font-weight: lighter;
+}
+#searchbar div{
 position: relative;
 display: inline-block;
 padding: 15px 15px;
 line-height: 20px;
+font-family: Helvetica;
+font-weight: lighter;
 
 }
-#searchbar li span:hover{
-	text-decoration: none;
-	background-color: #ccc;
-}
-#searchbar li div{
-	padding-left: 15px;
+#searchContactBox{
+	margin-top: 5px;
+	min-width: 400px;
+	min-height: 40px;
 }
 #searchbar li div:hover{
 	text-decoration: none;
 	background-color: #ccc;
+}
+#searchbar li div{
+	padding: auto 0 auto 15px;
 }
 
 .navbar .divider{
@@ -139,9 +155,32 @@ line-height: 20px;
 	font-weight: bold;
 }
 /* Search Box*/
-.form-control #searchContactBox input{
+#searchContactBox input{
 	border:none;
 	box-shadow: none;
+}
+div[data-toggle="buttons"] label {
+display: inline-block;
+padding: 2px 12px;
+min-width: 100px;
+line-height: 2em;
+vertical-align: top;
+cursor: pointer;
+background-color: none;
+border: 1px solid #c8c8c8;
+color: #c8c8c8;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+-o-user-select: none;
+user-select: none;
+}
+.button-container{
+	width: 100%;
+}
+.titel-button{
+
+margin: 0px auto 0px auto;
 }
 /******************************************************/
 /******************************************************/
@@ -162,12 +201,11 @@ line-height: 20px;
 /* CONTACTS*/
 
 /* Alphabetic search */
-.modal #searchContactBox{
-	height: 50px;
-	font-size: 35px;
-}
-.modal-backdrop #searchContactBox {
-	background-color: red;
+
+ul .dropdown .dropdown-menu{			/* DOESNT WORK>> TO DO  Problem is min-width in bootstrap of dropdown-menu*/
+	min-width: 140px;
+	text-align: center;
+
 }
 .letter{
 	min-height: 3.4vh;
@@ -227,9 +265,7 @@ ul.nav li.dropdown:hover ul.dropdown-menu{
 	z-index: 1;
 	font-weight: bold;
 }
-.searchButton{
 
-}
 #allContacts{
 	position: relative;
 	margin-top: 70px;
