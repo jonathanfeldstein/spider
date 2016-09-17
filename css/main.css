@@ -55,54 +55,21 @@ body {
 .spacersmall {
 	height: 10px;
 }
-
 /******************************************************/
-/* PAGES */
-#searchbar .active  {
-  background-color: #ccc;
-}
-.filter li {
-  display: inline;
-}
-ul .filter{
-	margin-top: 15px;
-}
-#searchbar .letters{
-	padding: 0 7px 0 7px;
-	font-family: Helvetica;
-  	font-weight: lighter;
-}
-#searchbar div{
-position: relative;
-display: inline-block;
-padding: 15px 15px;
-line-height: 20px;
-font-family: Helvetica;
-font-weight: lighter;
+/* MODALs GENERAL *************************************/
 
-}
-#searchContactBox{
-	margin-top: 5px;
-	min-width: 400px;
-	min-height: 40px;
-}
-#searchbar li div:hover{
-	text-decoration: none;
-	background-color: #ccc;
-}
-#searchbar li div{
-	padding: auto 0 auto 15px;
+.modal-header {
+    background-color: #333;
+    color: #fff !important;
+    text-align: center;
+    font-size: 1.2em;
 }
 
-.navbar .divider{
-	//font-size: 1em;
-	height: 100%;
-	width: 2px;
-	background-color: #fff;
-	padding: 0;
+.modal-header, .modal-body {
+    padding: 3em;
 }
-
-
+/******************************************************/
+/* Homepage (incl. Company, Products) *****************/
 #home {
 	background-color: rgba(255, 255, 255, .8);
 	padding: 2em;
@@ -147,84 +114,89 @@ font-weight: lighter;
 #products .description {
 	margin: 10%;
 }
-/******************************************************/
-/* MODALs Contact */
+/* Contactbook ****************************************/
 
-/*COMPLETE CONTACT INFORMATION*/
-.contact-total span{
+/* Searchbar */
+/* All buttons */
+#searchbar{
+	background-color: #f2f2f2;
+	display: block;
+	margin-top: 50px;
+	position:fixed;
+	width: 100vw;
+	z-index: 1;
 	font-weight: bold;
 }
-/* Search Box*/
-#searchContactBox input{
-	border:none;
-	box-shadow: none;
-}
-div[data-toggle="buttons"] label {
+
+#searchbar div{
+position: relative;
 display: inline-block;
-padding: 2px 12px;
-min-width: 100px;
-line-height: 2em;
-vertical-align: top;
-cursor: pointer;
-background-color: none;
-border: 1px solid #c8c8c8;
-color: #c8c8c8;
--webkit-user-select: none;
--moz-user-select: none;
--ms-user-select: none;
--o-user-select: none;
-user-select: none;
-}
-.button-container{
-	width: 100%;
-}
-.titel-button{
+padding: 15px 15px;
+line-height: 20px;
+font-family: Helvetica;
+font-weight: lighter;
 
-margin: 0px auto 0px auto;
-}
-/******************************************************/
-/******************************************************/
-/* LOGIN & REGISTER */
-
-.modal-header {
-    background-color: #333;
-    color: #fff !important;
-    text-align: center;
-    font-size: 1.2em;
 }
 
-.modal-header, .modal-body {
-    padding: 3em;
+#searchbar li div{
+	padding: auto 0 auto 15px;
 }
 
-/******************************************************/
-/* CONTACTS*/
+#searchbar li div:hover{
+	text-decoration: none;
+	background-color: #ccc;
+}
 
-/* Alphabetic search */
+/*Order By Button */
 
-ul .dropdown .dropdown-menu{			/* DOESNT WORK>> TO DO  Problem is min-width in bootstrap of dropdown-menu*/
+ul .dropdown .dropdown-menu{
 	min-width: 140px;
 	text-align: center;
 
 }
-.letter{
-	min-height: 3.4vh;
+
+/* to separate buttons*/
+.navbar .divider{
+	height: 100%;
+	width: 2px;
+	background-color: #fff;
+	padding: 0;
 }
-/* Dropdown information of Contact */
-ul.nav li.dropdown:hover ul.dropdown-menu{
-	display: block;
-	margin-top:0px
+/* Buttons to order alphabetically */
+#searchbar .active  {
+  background-color: #ccc;
+}
+.filter li {
+  display: inline;
+}
+ul .filter{
+	margin-top: 15px;
+}
+#searchbar .letters{
+	padding: 0 7px 0 7px;
+	font-family: Helvetica;
+  	font-weight: lighter;
 }
 
+
+/* Searchbox */
+#searchContactBox{
+	margin-top: 5px;
+	min-width: 400px;
+	min-height: 40px;
+}
+#searchContactBox input{
+	border:none;
+	box-shadow: none;
+}
+/* Normal/ Hover/ Click-on information of Contact */
+
 .grow {
-    height: 50px; /* Origional height */
+    height: 50px; /* Needed, to be smooth while hover */
     padding-top: 10px;
   
 }
 
-.meeting{
-	box-sizing: inherit;
-}
 .userContact{
 	font-size: 20px;
 }
@@ -243,37 +215,31 @@ ul.nav li.dropdown:hover ul.dropdown-menu{
 	font-weight: normal;
 
 }
-.contactPic img{
-	max-width: 5vw;
-}
-
-.sortBy{
-	position: fixed;
-	margin-top: 0px;
-}
-.alphabetSearch{
-	position: fixed;
-	margin-top: 20px;
-
-}
-#searchbar{
-	background-color: #f2f2f2;
-	display: block;
-	margin-top: 50px;
-	position:fixed;
-	width: 100vw;
-	z-index: 1;
+/******************************************************/
+/* MODALs Contact *************************************/
+.contact-total span{
 	font-weight: bold;
 }
-
-#allContacts{
-	position: relative;
-	margin-top: 70px;
+/* Add Contact Modal*/
+/* Chose buttons */
+div[data-toggle="buttons"] label {
+display: inline-block;
+padding: 2px 12px;
+min-width: 100px;
+line-height: 2em;
+vertical-align: top;
+cursor: pointer;
+background-color: none;
+border: 1px solid #c8c8c8;
+color: #c8c8c8;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+-o-user-select: none;
+user-select: none;
 }
-/******************************************************/
-/*CALENDAR*/
-.orgCalendar{
-	background-color: #d9d9d9;
-	height: 100vh;
-	width:20vw;
+
+/* Display Total Information Modal */
+.contactPic img{
+	max-width: 5vw;
 }
