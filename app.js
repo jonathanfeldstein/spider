@@ -14,6 +14,10 @@ app.config(function ($routeProvider) {
       controller: 'ContactsController as ctrl', 
       templateUrl: 'components/contacts/contacts.html' 
     }) 
+    .when('/messages', { 
+      controller: 'MessagesController as ctrl', 
+      templateUrl: 'components/messages/messages.html' 
+    }) 
     .otherwise({ 
       redirectTo: '/home' 
     }); 

@@ -1,0 +1,71 @@
+<!-- Navigationbar of Contactbook -->
+<nav class="navbar">
+    <div class="container-fluid">
+    
+    <!-- Toggle in case of SMALL device -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#searchbar">
+        <span class="caret"></span>
+      </button>
+    </div>
+    </div>
+    <div class="collapse navbar-collapse" id="searchbar">
+      <!-- Different buttons of navigationbar -->
+     <ul class="nav navbar-nav">
+    <!--    <li><div id="addButton" data-toggle="modal" data-target="#addContactmodal">Add</div></li>
+        <li><a class="divider"></a></li>
+        <li class="dropdown">
+                  <div class="dropdown-toggle" data-toggle="dropdown">Order By<span class="caret"></span></div>                     
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+                    <li><div  id="sortFirstButton" data-toggle="modal" data-target="#login-modal" ng-click="sortBy('firstname')">First Name</div></li>
+                        <span class="sortorder" ng-show="propertyName === 'firstname'" ng-class="{reverse: reverse}"></span>
+                    <li><div  id="sortLastButton" data-toggle="modal" data-target="#login-modal" ng-click="sortBy('lastname')">Last Name</div></li>
+                        <span class="sortorder" ng-show="propertyName === 'lastname'" ng-class="{reverse: reverse}"></span>
+                    <li><div  id="sortFirstButton" data-toggle="modal" data-target="#login-modal" ng-click="sortByOneWay('nextmeeting')">Next Meeting</div></li>
+                        <span class="sortorder" ng-show="propertyName === 'nextmeeting'"></span>
+                  </ul>
+                </li>
+        <li><a class="divider"></a></li>
+        <li>
+            <ul class="filter">
+                <span class="letters" ng-click="activateLetter('')" ng-class="{'active':activeLetter==''}">ALL</span>
+                <span class="letters" ng-repeat="letter in alphabet track by $index " ng-click="activateLetter(letter)" ng-class="{'active':letter==activeLetter}">{{letter}}</span>
+            </ul>
+        </li>
+        <li><a class="divider"></a></li>
+        <li>
+          <span class="searchButton" data-target="#searchContact">
+             <input type="text" id="searchContactBox" ng-click="activeLetter = []; showcontacts=contacts" ng-model="search.$" placeholder="Search (firstname, lastname, message)" name="search">
+          </span>
+        </li> -->
+      </ul>
+    </div>
+</nav>
+	<!--
+		<add-contact submit-func='postContact'></add-contact>
+
+  <div id="searchContact" class="modal" role="dialog">
+    <div class="modal-dialog" >
+
+        <form role="form" name="searchForm">
+
+        </form>
+
+    </div>
+  </div> -->
+
+<!-- Space between navigationbar and Contactlist -->
+<div class="spacer"></div>
+<div class="spacersmall"></div>
+<!-- Contactlist -->
+<div class="main">
+      <div class="container">
+         <!-- Add all contacts from contactlist -->
+         <div class="singleMessage" ng-repeat="message in showmessages">
+
+			   <!-- Single Contact from Contactlist -->
+				<single-message message="message" ></single-message>
+
+        </div>
+      </div>
+</div>
