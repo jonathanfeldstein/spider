@@ -114,6 +114,7 @@ body {
 #products .description {
 	margin: 10%;
 }
+/******************************************************/
 /* Contactbook ****************************************/
 
 /* Searchbar */
@@ -215,7 +216,7 @@ ul .filter{
 	font-weight: normal;
 
 }
-/******************************************************/
+
 /* MODALs Contact *************************************/
 .contact-total span{
 	font-weight: bold;
@@ -242,4 +243,35 @@ user-select: none;
 /* Display Total Information Modal */
 .contactPic img{
 	max-width: 5vw;
+}
+
+/*****************************************************/
+/* Inbox *********************************************/
+
+/*Single Message in Inbox */
+.shortMessage{
+background-color: #f5fa76;
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  margin-bottom: -1px;
+  border: 1px solid #dddddd;
+}
+.longMessage{
+background-color: #94bdf6;
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  margin-bottom: -1px;
+  border: 1px solid #dddddd;
+}
+
+.messageContainer{
+	height: 25px;
+}
+.messageSender{
+	font-size: 15px;
+}
+.messageInfo{
+	font-size: 15px;
 }
