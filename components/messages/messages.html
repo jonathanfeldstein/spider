@@ -18,24 +18,24 @@
                     </label>
     </div>
     <div class="btn-group btn-group-horizontal button-container" data-toggle="buttons">
-                    <label class="btn active title-button" ng-click='filterIsBusiness=""'>
+                    <label class="btn active title-button" ng-click='filterIsBusiness="all"'>
                         <span>All</span>
                     </label>                    
-                    <label class="btn title-button" ng-click='filterIsBusiness="true"'>
+                    <label class="btn title-button" ng-click='filterIsBusiness="yes"'>
                         <span>Business</span>
                     </label>
-                    <label class="btn title-button" ng-click='filterIsBusiness="false"'>
+                    <label class="btn title-button" ng-click='filterIsBusiness="no"'>
                         <span>Private</span>
                     </label>
     </div>
     <div class="btn-group btn-group-horizontal button-container" data-toggle="buttons">
-                    <label class="btn active title-button" ng-click='filterbylength="all"'>
+                    <label class="btn active title-button" ng-click='filterByLength="all"'>
                         <span>All</span>
                     </label>                    
-                    <label class="btn title-button" ng-click='filterbylength="long"'>
+                    <label class="btn title-button" ng-click='filterByLength="long"'>
                         <span>Letter</span>
                     </label>
-                    <label class="btn title-button" ng-click='filterbylength="short"'>
+                    <label class="btn title-button" ng-click='filterByLength="short"'>
                         <span>Chat</span>
                     </label>
     </div>
@@ -87,7 +87,7 @@
 <div class="main">
       <div class="container">
          <!-- Add all contacts from contactlist -->
-         <div class="singleMessage" ng-repeat="message in showmessages"  ng-show="sortByLength(message, filterbylength)">
+         <div class="singleMessage" ng-repeat="message in showmessages"  ng-show="sortByLength(message, filterByLength, filterIsBusiness)">
 
 			   <!-- Single Contact from Contactlist -->
 				<single-message message="message" ></single-message>
