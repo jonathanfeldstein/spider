@@ -39,6 +39,11 @@
                         <span>Chat</span>
                     </label>
     </div>
+    <div>
+                        <span class="searchButton" data-target="#searchContact">
+                           <input type="text" id="searchMessageBox" ng-click="activeLetter = []; showcontacts=contacts" ng-model="search.$" placeholder="Search (firstname, lastname, message)" name="search">
+                        </span>
+    </div>
     <!--    <li><a class="divider"></a></li>
         <li class="dropdown">
                   <div class="dropdown-toggle" data-toggle="dropdown">Order By<span class="caret"></span></div>                     
@@ -87,7 +92,7 @@
 <div class="main">
       <div class="container">
          <!-- Add all contacts from contactlist -->
-         <div class="singleMessage" ng-repeat="message in showmessages"  ng-show="sortByLength(message, filterByLength, filterIsBusiness)">
+         <div class="singleMessage" ng-repeat="message in showmessages | filter:search"  ng-show="sortByLength(message, filterByLength, filterIsBusiness)">
 
 			   <!-- Single Contact from Contactlist -->
 				<single-message message="message" ></single-message>

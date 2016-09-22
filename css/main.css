@@ -266,7 +266,14 @@ font-family: Helvetica;
 font-weight: lighter;
 
 }
-
+#searchMessageBox{
+	min-width: 400px;
+	line-height: 23px;
+}
+#searchMessageBox input{
+	border:none;
+	box-shadow: none;
+}
 /*Single Message in Inbox */
 .shortMessage{
 background-color: #fafcb6;
