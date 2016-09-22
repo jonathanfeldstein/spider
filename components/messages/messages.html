@@ -12,78 +12,54 @@
     <div class="collapse navbar-collapse" id="messagebar">
       <!-- Different buttons of navigationbar -->
      <ul class="nav navbar-nav">
-    <div class="btn-group btn-group-horizontal button-container" data-toggle="buttons">
-                    <label class="btn title-button" ng-click='filterbylength="all"'>
-                        <span>New</span>
-                    </label>
-    </div>
-    <div class="btn-group btn-group-horizontal button-container" data-toggle="buttons">
-                    <label class="btn active title-button" ng-click='filterIsBusiness="all"'>
-                        <span>All</span>
-                    </label>                    
-                    <label class="btn title-button" ng-click='filterIsBusiness="yes"'>
-                        <span>Business</span>
-                    </label>
-                    <label class="btn title-button" ng-click='filterIsBusiness="no"'>
-                        <span>Private</span>
-                    </label>
-    </div>
-    <div class="btn-group btn-group-horizontal button-container" data-toggle="buttons">
-                    <label class="btn active title-button" ng-click='filterByLength="all"'>
-                        <span>All</span>
-                    </label>                    
-                    <label class="btn title-button" ng-click='filterByLength="long"'>
-                        <span>Letter</span>
-                    </label>
-                    <label class="btn title-button" ng-click='filterByLength="short"'>
-                        <span>Chat</span>
-                    </label>
-    </div>
-    <div>
-                        <span class="searchButton" data-target="#searchContact">
-                           <input type="text" id="searchMessageBox" ng-click="activeLetter = []; showcontacts=contacts" ng-model="search.$" placeholder="Search (firstname, lastname, message)" name="search">
-                        </span>
-    </div>
-    <!--    <li><a class="divider"></a></li>
-        <li class="dropdown">
-                  <div class="dropdown-toggle" data-toggle="dropdown">Order By<span class="caret"></span></div>                     
-                  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-                    <li><div  id="sortFirstButton" data-toggle="modal" data-target="#login-modal" ng-click="sortBy('firstname')">First Name</div></li>
-                        <span class="sortorder" ng-show="propertyName === 'firstname'" ng-class="{reverse: reverse}"></span>
-                    <li><div  id="sortLastButton" data-toggle="modal" data-target="#login-modal" ng-click="sortBy('lastname')">Last Name</div></li>
-                        <span class="sortorder" ng-show="propertyName === 'lastname'" ng-class="{reverse: reverse}"></span>
-                    <li><div  id="sortFirstButton" data-toggle="modal" data-target="#login-modal" ng-click="sortByOneWay('nextmeeting')">Next Meeting</div></li>
-                        <span class="sortorder" ng-show="propertyName === 'nextmeeting'"></span>
-                  </ul>
-                </li>
-        <li><a class="divider"></a></li>
-        <li>
-            <ul class="filter">
-                <span class="letters" ng-click="activateLetter('')" ng-class="{'active':activeLetter==''}">ALL</span>
-                <span class="letters" ng-repeat="letter in alphabet track by $index " ng-click="activateLetter(letter)" ng-class="{'active':letter==activeLetter}">{{letter}}</span>
-            </ul>
-        </li>
-        <li><a class="divider"></a></li>
-        <li>
-          <span class="searchButton" data-target="#searchContact">
-             <input type="text" id="searchContactBox" ng-click="activeLetter = []; showcontacts=contacts" ng-model="search.$" placeholder="Search (firstname, lastname, message)" name="search">
-          </span>
-        </li> -->
+          <div class="btn-group btn-group-horizontal button-container" data-toggle="buttons">
+                          <label class="btn title-button" ng-click='filterbylength="all"'>
+                              <span>New</span>
+                          </label>
+          </div>
+          <div class="btn-group btn-group-horizontal button-container" data-toggle="buttons">
+                          <label class="btn active title-button" ng-click="sortByChronos('sentdate')">
+                              <span>Importance</span>
+                          </label>                    
+                          <label class="btn title-button" ng-click="sortByChronos('sentdate')">
+                              <span>Chronologically</span>
+                          </label>
+
+          </div>
+          <div class="btn-group btn-group-horizontal button-container" data-toggle="buttons">
+                          <label class="btn active title-button" ng-click='filterIsBusiness="all"'>
+                              <span>All</span>
+                          </label>                    
+                          <label class="btn title-button" ng-click='filterIsBusiness="yes"'>
+                              <span>Business</span>
+                          </label>
+                          <label class="btn title-button" ng-click='filterIsBusiness="no"'>
+                              <span>Private</span>
+                          </label>
+          </div>
+          <div class="btn-group btn-group-horizontal button-container" data-toggle="buttons">
+                          <label class="btn active title-button" ng-click='filterByLength="all"'>
+                              <span>All</span>
+                          </label>                    
+                          <label class="btn title-button" ng-click='filterByLength="long"'>
+                              <span>Letter</span>
+                          </label>
+                          <label class="btn title-button" ng-click='filterByLength="short"'>
+                              <span>Chat</span>
+                          </label>
+          </div>
+          <div>
+                              <span class="searchButton" data-target="#searchContact">
+                                 <input type="text" id="searchMessageBox" ng-click="activeLetter = []; showcontacts=contacts" ng-model="search.$" placeholder="Search" name="search">
+                              </span>
+          </div>
       </ul>
     </div>
 </nav>
 	<!--
 		<add-contact submit-func='postContact'></add-contact>
 
-  <div id="searchContact" class="modal" role="dialog">
-    <div class="modal-dialog" >
-
-        <form role="form" name="searchForm">
-
-        </form>
-
-    </div>
-  </div> -->
+-->
 
 <!-- Space between navigationbar and Contactlist -->
 <div class="spacer"></div>

@@ -1,6 +1,6 @@
-app.controller('MessagesController', ['$scope','MessagesService', MessagesController]);
+app.controller('MessagesController', ['$scope','MessagesService','orderByFilter', MessagesController]);
 
-function MessagesController($scope, MessagesService) {
+function MessagesController($scope, MessagesService, orderBy) {
 
   //Get all Contacts (Contactbook)
     MessagesService.getMessages()
@@ -41,5 +41,12 @@ function MessagesController($scope, MessagesService) {
              return true;
          return false;
     }
-    }
+    };
+    $scope.sortByChronos = function(propertyName) {
+    $scope.reverse = (propertyName !== null && $scope.propertyName === propertyName)
+        ? !$scope.reverse : false;
+    $scope.propertyName = propertyName;
+    $scope.messages = orderBy($scope.messages, $scope.propertyName, $scope.reverse);
+    $scope.showmessages=$scope.messages;
+    };
 };

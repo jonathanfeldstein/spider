@@ -267,8 +267,8 @@ font-weight: lighter;
 
 }
 #searchMessageBox{
-	min-width: 400px;
-	line-height: 23px;
+	min-width: 240px;
+	line-height: 22px;
 }
 #searchMessageBox input{
 	border:none;
