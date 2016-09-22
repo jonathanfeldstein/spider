@@ -9,11 +9,37 @@
       </button>
     </div>
     </div>
-    <div class="collapse navbar-collapse" id="searchbar">
+    <div class="collapse navbar-collapse" id="messagebar">
       <!-- Different buttons of navigationbar -->
      <ul class="nav navbar-nav">
-    <!--    <li><div id="addButton" data-toggle="modal" data-target="#addContactmodal">Add</div></li>
-        <li><a class="divider"></a></li>
+    <div class="btn-group btn-group-horizontal button-container" data-toggle="buttons">
+                    <label class="btn title-button" ng-click='filterbylength="all"'>
+                        <span>New</span>
+                    </label>
+    </div>
+    <div class="btn-group btn-group-horizontal button-container" data-toggle="buttons">
+                    <label class="btn active title-button" ng-click='filterIsBusiness=""'>
+                        <span>All</span>
+                    </label>                    
+                    <label class="btn title-button" ng-click='filterIsBusiness="true"'>
+                        <span>Business</span>
+                    </label>
+                    <label class="btn title-button" ng-click='filterIsBusiness="false"'>
+                        <span>Private</span>
+                    </label>
+    </div>
+    <div class="btn-group btn-group-horizontal button-container" data-toggle="buttons">
+                    <label class="btn active title-button" ng-click='filterbylength="all"'>
+                        <span>All</span>
+                    </label>                    
+                    <label class="btn title-button" ng-click='filterbylength="long"'>
+                        <span>Letter</span>
+                    </label>
+                    <label class="btn title-button" ng-click='filterbylength="short"'>
+                        <span>Chat</span>
+                    </label>
+    </div>
+    <!--    <li><a class="divider"></a></li>
         <li class="dropdown">
                   <div class="dropdown-toggle" data-toggle="dropdown">Order By<span class="caret"></span></div>                     
                   <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
@@ -61,7 +87,7 @@
 <div class="main">
       <div class="container">
          <!-- Add all contacts from contactlist -->
-         <div class="singleMessage" ng-repeat="message in showmessages">
+         <div class="singleMessage" ng-repeat="message in showmessages"  ng-show="sortByLength(message, filterbylength)">
 
 			   <!-- Single Contact from Contactlist -->
 				<single-message message="message" ></single-message>

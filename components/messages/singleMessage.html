@@ -1,4 +1,4 @@
-<li  ng-if="message.prosa.length>200" class="longMessage">   
+<li  ng-if="message.prosa.length>200" class="longMessage" data-ng-hide="shortHidden">   
     <div class="messageContainer">
      <!--   <contact-total contact="contact"></contact-total> -->
               <div class="col-sm-3">
@@ -21,8 +21,8 @@
 
     <div style="clear: left;"></div>
 </li>
-<li ng-if="message.prosa.length<=200" class="shortMessage">   
-    <div class="messageContainer">
+<li ng-if="message.prosa.length<=200" class="shortMessage" data-ng-hide="longHidden">   
+    <div class="messageContainer"  >
      <!--   <contact-total contact="contact"></contact-total> -->
               <div class="col-sm-3">
                 <div class="messageSender" >{{message.sender}}</div>  <!-- data-toggle="modal" data-target="{{ '#contact' + contact.id }}" -->

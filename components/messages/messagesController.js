@@ -9,4 +9,21 @@ function MessagesController($scope, MessagesService) {
         $scope.showmessages=$scope.messages;
       });
 
+	$scope.filterbylength="all"
+    $scope.sortByLength=function(message, filterbylength){
+     if(filterbylength=="long")
+     {
+         if(message.prosa.length>=200)
+             return true;
+         return false;
+     }else if (filterbylength=="short")
+     {
+         if(message.prosa.length<=200)
+             return true;
+         return false;
+     }else 
+     {
+        return true;
+    }
+    }
 };
