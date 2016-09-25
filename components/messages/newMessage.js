@@ -1,5 +1,5 @@
 //directive building MODAL and to POST information from modal to SERVER
-app.directive('addContact', ['ContactsService', function(ContactsService) { 
+app.directive('newMessage', ['MessagesService', function(MessagesService) { 
   return { 
     // "restricte" defines how directive will be used, "E" say its an html Element
     restrict: 'E', 
@@ -10,13 +10,13 @@ app.directive('addContact', ['ContactsService', function(ContactsService) {
 
     }, 
     // templateUrl to definie MODAL
-    templateUrl: 'components/contacts/addContact.html',
+    templateUrl: 'components/messages/newMessage.html',
     //makes the directive interactive eith User action
     link: function($scope, element, attrs) {
-    $scope.contact={};
- 		$scope.submitWrapper = function(contact){
+    $scope.message={};
+ 		$scope.submitWrapper = function(message){
 
- 			$scope.submitFunc(contact);
+ 			$scope.submitFunc(message);
  			$scope.dismiss();
  		};
 	  	
@@ -35,7 +35,9 @@ app.directive('dismissModal', function() {
      }
    } 
 });
+/*                                                                              TODO
 // Makes Modal draggable in Angular
+modaldraggable
 app.directive('modaldraggable', function ($document) {
   "use strict";
   return function (scope, element) {
@@ -73,4 +75,4 @@ app.directive('modaldraggable', function ($document) {
       $document.unbind('mouseup', mouseup);
     }
   };
-});
+}); */

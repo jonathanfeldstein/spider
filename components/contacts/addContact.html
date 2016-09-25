@@ -1,10 +1,11 @@
- <div class="modal fade" dismiss-modal id="addContactmodal" role="dialog">
+ <div class="modal fade" dismiss-modal id="addContactmodal" role="dialog" data-backdrop="false">
   <div class="modal-dialog">
 
     <!-- Modal content-->
     <div class="modal-content">
     <!--Titel of modal --> 
       <div class="modal-header">
+
         <h4>Add Contact</h4>
       </div>
 
@@ -16,19 +17,19 @@
                 <label for="add-form-first-name">Name</label>
                     <br>
                 <div class="btn-group btn-group-horizontal button-container" data-toggle="buttons">
-                    <label class="btn active title-button" ng-model="contact.titel">
+                    <label class="btn active title-button gettitel" ng-model="contact.titel">
                         <input type="radio" name='titel' checked><span>Mr.</span>
                     </label>
-                    <label class="btn title-button" ng-model="contact.titel">
+                    <label class="btn title-button gettitel" ng-model="contact.titel">
                         <input type="radio" name='titel'><span>Mrs.</span>
                     </label>
-                    <label class="btn title-button" ng-model="contact.titel">
+                    <label class="btn title-button gettitel" ng-model="contact.titel">
                         <input type="radio" name='titel'><span>Miss</span>
                     </label>
-                    <label class="btn title-button" ng-model="contact.titel">
+                    <label class="btn title-button gettitel" ng-model="contact.titel">
                         <input type="radio" name='titel'><span>Dr.</span>
                     </label>
-                    <label class="btn title-button" ng-model="contact.titel">
+                    <label class="btn title-button gettitel" ng-model="contact.titel">
                         <input type="radio" name='titel'><span>Prof.</span>
                     </label>
                 </div>

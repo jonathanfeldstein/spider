@@ -12,9 +12,9 @@
     <div class="collapse navbar-collapse" id="messagebar">
       <!-- Different buttons of navigationbar -->
      <ul class="nav navbar-nav">
-          <div class="btn-group btn-group-horizontal button-container" data-toggle="buttons">
-                          <label class="btn title-button" ng-click='filterbylength="all"'>
-                              <span>New</span>
+          <div class="btn-group btn-group-horizontal button-container">
+                          <label class="btn title-button">
+                              <span   data-toggle="modal" data-target="#newMessagemodal">New</span>
                           </label>
           </div>
           <div class="btn-group btn-group-horizontal button-container" data-toggle="buttons">
@@ -56,10 +56,9 @@
       </ul>
     </div>
 </nav>
-	<!--
-		<add-contact submit-func='postContact'></add-contact>
+  <!-- Directive for modal-form to add Contact -->
+    <new-message submit-func='postNewMessage'></new-message>
 
--->
 
 <!-- Space between navigationbar and Contactlist -->
 <div class="spacer"></div>

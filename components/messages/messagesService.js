@@ -16,15 +16,15 @@ function MessagesService($http) {
   	/*	function getContactById(id){
   			return $http.get(); // TODO
   		}; */
-  	/*//Add new Contact to list OR modifiy existing Contact
-  		function postContact(contact){
-  			return $http.post('/toto.php', JSON.stringify(contact));
-  		}; */
+  	//Create New Messagethread
+  		function postNewMessage(message){
+  			return $http.post('/toto2.php', JSON.stringify(message));
+  		}; 
 
 //Communication with Controller(s)
    return {
    		getMessages: getMessages,
-   		/* postContact: postContact, */
+   		postNewMessage: postNewMessage,
    		/*getContactById: getContactById*/
 		};
 
