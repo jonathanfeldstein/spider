@@ -32,7 +32,7 @@ function ContactsController($scope, ContactsService, orderBy) {
           })
           .error(function(data, status, headers, config) {
               //$scope.progress = data;
-              $scope.messages = 'There was a network error. Try again later.';
+              $scope.errormessages = 'There was a network error. Try again later.';
               console.error(data);
           });
       };

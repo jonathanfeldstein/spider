@@ -268,8 +268,28 @@ font-family: Helvetica;
 font-weight: lighter;
 
 }
+
+#messagebar #newMessageButton{
+	display: inline-block;
+	padding: 2px 12px;
+	line-height: 2em;
+	vertical-align: top;
+	cursor: pointer;
+	background-color: white;
+	border: 1px solid #c8c8c8;
+	color: #c8c8c8;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+#messagebar .messagenavbutton{
+	min-width: 70px;
+}
+
 #searchMessageBox{
-	min-width: 240px;
+	min-width: 340px;
 	line-height: 22px;
 }
 #searchMessageBox input{

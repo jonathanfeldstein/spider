@@ -1,0 +1,39 @@
+<li  ng-if="sentence.id==sentence.user_id"" class="userMessage">   
+    <div class="dialogContainer">
+     <!--   <contact-total contact="contact"></contact-total> -->
+              <div class="row">
+                <div class="dialogText" >{{sentence.prosa}}</div> 
+              </div>
+
+              <div class="row">
+                <div class="col-sm-19">
+                  <div class="dialogDate" style="font-size:15px">{{sentence.sentdate | date}}</div>
+                </div>
+                <div class="col-sm-1">
+                  <img style="height: 20px" ng-src="{{sentence.postman == 'Mail' && 'res/postman/mail.png' || sentence.postman == 'WhatsApp' && 'res/postman/wa.png' || sentence.postman == 'Facebook' && 'res/postman/fb.png' || sentence.postman == 'Contactify' && 'res/postman/cf.png' || sentence.postman == 'Telegram' && 'res/postman/tg.png'}}" />
+                </div>
+        </div>
+    </div>
+
+    <div style="clear: left;"></div>
+</li>
+
+<li  ng-if="sentence.id==sentence.interlocutor_id"" class="interlocutorMessage">   
+    <div class="dialogContainer">
+     <!--   <contact-total contact="contact"></contact-total> -->
+              <div class="row">
+                <div class="dialogText" >{{sentence.prosa}}</div> 
+              </div>
+
+              <div class="row">
+                <div class="col-sm-19">
+                  <div class="dialogDate" style="font-size:15px">{{sentence.sentdate | date}}</div>
+                </div>
+                <div class="col-sm-1">
+                  <img style="height: 20px" ng-src="{{sentence.postman == 'Mail' && 'res/postman/mail.png' || sentence.postman == 'WhatsApp' && 'res/postman/wa.png' || sentence.postman == 'Facebook' && 'res/postman/fb.png' || sentence.postman == 'Contactify' && 'res/postman/cf.png' || sentence.postman == 'Telegram' && 'res/postman/tg.png'}}" />
+                </div>
+        </div>
+    </div>
+
+    <div style="clear: left;"></div>
+</li>

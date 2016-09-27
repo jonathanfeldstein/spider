@@ -17,7 +17,11 @@ app.config(function ($routeProvider) {
     .when('/messages', { 
       controller: 'MessagesController as ctrl', 
       templateUrl: 'components/messages/messages.html' 
-    }) 
+    })
+    .when('/dialog', { 
+      controller: 'DialogController as ctrl', 
+      templateUrl: 'components/messages/dialog.html' 
+    })        
     .otherwise({ 
       redirectTo: '/home' 
     }); 
