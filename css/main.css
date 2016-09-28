@@ -350,9 +350,34 @@ background: repeating-linear-gradient(
 .messageInfo{
 	font-size: 15px;
 }
-
-/************************************************/
 /*Message Modal*/
 .messageFooter{
 	max-height: 30px;
+}
+/************************************************/
+/*DIALOG*****************************************/
+.dialogContainer{
+	margin-right: 0;
+	margin-left: auto;
+	width: 70vw;
+	position: absolute;
+	right: 0px;
+}
+.generalSentence{
+	margin-top: 5px;
+	display: inline-block;
+}
+.userSentence{
+	background-color:  #b3ff66;
+	max-width:40vw;
+	padding: 5px;
+	position: relative;
+	margin-right: 10px;
+
+}
+.interlocutorSentence{
+	background-color:  #ffff66;
+	max-width:40vw;
+	padding:5px;
+	margin-left: 10px;
 }

@@ -1,12 +1,13 @@
-app.controller('DialogController', ['$scope','DialogService','orderByFilter', DialogController]);
+app.controller('DialogController', ['$scope','DialogService', DialogController]);
 
-function DialogController($scope, MessagesService, orderBy) {
+function DialogController($scope, DialogService) {
 
   //Get all Contacts (Contactbook)
     DialogService.getDialog()
-      .success(function(inbox){
-        $scope.dialog = inbox['dialog'];
-        $scope.showdialog=$scope.dialog;
+      .success(function(story){
+        $scope.user_id = story['user_id'];
+        $scope.interlocutor = story['interlocutor'];
+        $scope.dialog = story['dialog'];
       });
 
   //POST information to server

@@ -16,6 +16,16 @@
       </ul>
     </div>
 </nav>
+<!-- Space between navigationbar and Contactlist -->
+<div class="spacer"></div>
+<div class="spacersmall"></div>
+<!-- Contactlist -->
+<div class="main">
+      <div class="dialogContainer">
+         <!-- Add all contacts from contactlist -->
+          <div class="dialogMessage" ng-repeat="message in dialog | filter:search">
+         <!-- Single Contact from Contactlist -->
+        <dialog-message message="message" ></dialog-message>
 
         </div>
       </div>

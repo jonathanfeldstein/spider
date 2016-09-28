@@ -1,39 +1,41 @@
-<li  ng-if="sentence.id==sentence.user_id"" class="userMessage">   
-    <div class="dialogContainer">
-     <!--   <contact-total contact="contact"></contact-total> -->
+<div ng-if="message.id==787393286" style=" list-style-type: none; text-align:right">   
+    <div class="generalSentence userSentence" >
               <div class="row">
-                <div class="dialogText" >{{sentence.prosa}}</div> 
+                <div class="col-sm-20">
+                  <div class="dialogText" >{{message.prosa}}</div> 
+                </div>
               </div>
 
               <div class="row">
-                <div class="col-sm-19">
-                  <div class="dialogDate" style="font-size:15px">{{sentence.sentdate | date}}</div>
+                <div class="col-sm-14">
+                  <div class="dialogDate" style="font-size:15px">{{message.sentdate | date}}</div>
                 </div>
-                <div class="col-sm-1">
-                  <img style="height: 20px" ng-src="{{sentence.postman == 'Mail' && 'res/postman/mail.png' || sentence.postman == 'WhatsApp' && 'res/postman/wa.png' || sentence.postman == 'Facebook' && 'res/postman/fb.png' || sentence.postman == 'Contactify' && 'res/postman/cf.png' || sentence.postman == 'Telegram' && 'res/postman/tg.png'}}" />
+                <div class="col-sm-2">
+                  <img style="height: 20px" ng-src="{{message.postman == 'Mail' && 'res/postman/mail.png' || message.postman == 'WhatsApp' && 'res/postman/wa.png' || message.postman == 'Facebook' && 'res/postman/fb.png' || message.postman == 'Contactify' && 'res/postman/cf.png' || message.postman == 'Telegram' && 'res/postman/tg.png'}}" />
                 </div>
-        </div>
+              </div>
     </div>
 
     <div style="clear: left;"></div>
-</li>
+</div>
 
-<li  ng-if="sentence.id==sentence.interlocutor_id"" class="interlocutorMessage">   
-    <div class="dialogContainer">
-     <!--   <contact-total contact="contact"></contact-total> -->
+<div ng-if="message.id==787542589" style=" list-style-type: none">   
+    <div class="generalSentence interlocutorSentence" >
               <div class="row">
-                <div class="dialogText" >{{sentence.prosa}}</div> 
+                <div class="col-sm-20">
+                  <div class="dialogText" >{{message.prosa}}</div> 
+                </div>
               </div>
 
               <div class="row">
-                <div class="col-sm-19">
-                  <div class="dialogDate" style="font-size:15px">{{sentence.sentdate | date}}</div>
+                <div class="col-sm-14">
+                  <div class="dialogDate" style="font-size:15px">{{message.sentdate | date}}</div>
                 </div>
-                <div class="col-sm-1">
-                  <img style="height: 20px" ng-src="{{sentence.postman == 'Mail' && 'res/postman/mail.png' || sentence.postman == 'WhatsApp' && 'res/postman/wa.png' || sentence.postman == 'Facebook' && 'res/postman/fb.png' || sentence.postman == 'Contactify' && 'res/postman/cf.png' || sentence.postman == 'Telegram' && 'res/postman/tg.png'}}" />
+                <div class="col-sm-2">
+                  <img style="height: 20px" ng-src="{{message.postman == 'Mail' && 'res/postman/mail.png' || message.postman == 'WhatsApp' && 'res/postman/wa.png' || message.postman == 'Facebook' && 'res/postman/fb.png' || message.postman == 'Contactify' && 'res/postman/cf.png' || message.postman == 'Telegram' && 'res/postman/tg.png'}}" />
                 </div>
-        </div>
+              </div>
     </div>
 
     <div style="clear: left;"></div>
-</li>
+</div>
