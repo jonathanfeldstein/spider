@@ -12,7 +12,16 @@
     <div class="collapse navbar-collapse" id="messagebar">
       <!-- Different buttons of navigationbar -->
      <ul class="nav navbar-nav">
- 
+          <div class="btn-group btn-group-horizontal button-container">
+                          <label class="btn title-button" id="newMessageButton">
+                              <span  class="messagenavbutton" data-toggle="modal" data-target="#newMessagemodal">New</span>
+                          </label>
+          </div>
+           <div style="position:fixed; right:15px">
+                              <span class="searchButton" data-target="#searchMessage">
+                                 <input type="text" id="searchMessageBox" ng-click="activeLetter = []; showcontacts=contacts" ng-model="search.$" placeholder="Search" name="search">
+                              </span>
+          </div>
       </ul>
     </div>
 </nav>

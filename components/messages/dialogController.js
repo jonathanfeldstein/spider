@@ -1,6 +1,6 @@
-app.controller('DialogController', ['$scope','DialogService', DialogController]);
+app.controller('DialogController', ['$scope','DialogService','MessagesService', DialogController]);
 
-function DialogController($scope, DialogService) {
+function DialogController($scope, DialogService, MessagesService) {
 
   //Get all Contacts (Contactbook)
     DialogService.getDialog()
@@ -8,6 +8,12 @@ function DialogController($scope, DialogService) {
         $scope.user_id = story['user_id'];
         $scope.interlocutor = story['interlocutor'];
         $scope.dialog = story['dialog'];
+      });
+
+    MessagesService.getMessages()
+      .success(function(inbox){
+        $scope.messages = inbox['messages'];
+        $scope.showmessages=$scope.messages;
       });
 
   //POST information to server

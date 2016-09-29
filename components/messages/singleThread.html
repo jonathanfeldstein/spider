@@ -1,0 +1,72 @@
+<div  ng-if="message.prosa.length>200 && message.business=='no'" class="longMessageThread">   
+    <div class="messageContainer">
+          <div class="row">
+                <div class="col-sm-10">
+                  <div class="messageSender" >{{message.interlocutor}}</div>  <!-- data-toggle="modal" data-target="{{ '#contact' + contact.id }}" -->
+                </div>
+                <div class="col-sm-10">
+                  <div class="messageInfo">{{message.sentdate | date}}</div>
+                </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-20">
+                  <div class="messageInfo">{{message.prosa | limitTo:40}}</div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div ng-if="message.prosa.length<=200 && message.business=='no'" class="shortMessageThread">   
+    <div class="messageContainer">
+          <div class="row">
+                <div class="col-sm-10">
+                  <div class="messageSender" >{{message.interlocutor}}</div>  <!-- data-toggle="modal" data-target="{{ '#contact' + contact.id }}" -->
+                </div>
+                <div class="col-sm-10">
+                  <div class="messageInfo">{{message.sentdate | date}}</div>
+                </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-20">
+                  <div class="messageInfo">{{message.prosa | limitTo:40}}</div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div  ng-if="message.prosa.length>200 && message.business=='yes'" class="longMessageBusinessThread">   
+    <div class="messageContainer">
+          <div class="row">
+                <div class="col-sm-10">
+                  <div class="messageSender" >{{message.interlocutor}}</div>  <!-- data-toggle="modal" data-target="{{ '#contact' + contact.id }}" -->
+                </div>
+                <div class="col-sm-10">
+                  <div class="messageInfo">{{message.sentdate | date}}</div>
+                </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-20">
+                  <div class="messageInfo">{{message.prosa | limitTo:40}}</div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div ng-if="message.prosa.length<=200 && message.business=='yes'" class="shortMessageBusinessThread">   
+    <div class="messageContainer">
+          <div class="row">
+                <div class="col-sm-10">
+                  <div class="messageSender" >{{message.interlocutor}}</div>  <!-- data-toggle="modal" data-target="{{ '#contact' + contact.id }}" -->
+                </div>
+                <div class="col-sm-10">
+                  <div class="messageInfo">{{message.sentdate | date}}</div>
+                </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-20">
+                  <div class="messageInfo">{{message.prosa | limitTo:40}}</div>
+            </div>
+        </div>
+    </div>
+
+</div>

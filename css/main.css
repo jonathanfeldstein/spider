@@ -366,9 +366,11 @@ background: repeating-linear-gradient(
 .generalSentence{
 	margin-top: 5px;
 	display: inline-block;
+	border: 1px solid #ccccb3;
+	border-radius: 3px;
 }
 .userSentence{
-	background-color:  #b3ff66;
+	background-color:  #ccccb3;
 	max-width:40vw;
 	padding: 5px;
 	position: relative;
@@ -376,7 +378,7 @@ background: repeating-linear-gradient(
 
 }
 .interlocutorSentence{
-	background-color:  #ffff66;
+	background-color:  white;
 	max-width:40vw;
 	padding:5px;
 	margin-left: 10px;
