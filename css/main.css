@@ -409,6 +409,7 @@ background: repeating-linear-gradient(
 	padding: 5px;
 	position: relative;
 	margin-right: 10px;
+	text-align: left;
 
 }
 .interlocutorSentence{
@@ -416,4 +417,9 @@ background: repeating-linear-gradient(
 	max-width:40vw;
 	padding:5px;
 	margin-left: 10px;
+}
+.dialogDate{
+	font-style: italic;
+	font-size: 8px;
+	color: #7a7a52;
 }
