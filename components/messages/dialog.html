@@ -30,6 +30,14 @@
 <div class="spacersmall"></div>
 <!-- Contactlist -->
 <div class="main">
+      <div class="threadContainer">
+         <!-- Add all contacts from contactlist -->
+          <div class="dialogThread" ng-repeat="message in showmessages">
+         <!-- Single Contact from Contactlist -->
+        <single-thread message="message" ></single-thread>
+
+        </div>
+      </div>
       <div class="dialogContainer">
          <!-- Add all contacts from contactlist -->
           <div class="dialogMessage" ng-repeat="message in dialog | filter:search">

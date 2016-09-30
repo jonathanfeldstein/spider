@@ -356,12 +356,46 @@ background: repeating-linear-gradient(
 }
 /************************************************/
 /*DIALOG*****************************************/
+.threadContainer{
+	width: 30vw;
+	position: absolute;
+	left: 0;
+	top: 110px;
+	border-right: 1px solid #ccccb3;
+	max-height: 100%;
+	overflow: scroll;
+	overflow-x: hidden;
+
+}
+
+.longMessageThread{
+	border-bottom: 1px solid #ccccb3;	
+	display: inline-block;
+	min-width: 30vw; 
+}
+.shortMessageThread{
+	border-bottom: 1px solid #ccccb3;
+	display: inline-block;
+	min-width: 30vw;
+}
+.longMessageBusinessThread{
+	border-bottom: 1px solid #ccccb3;
+	display: inline-block;
+	min-width: 30vw;
+}
+.shortMessageBusinessThread{
+	border-bottom: 1px solid #ccccb3;
+	display: inline-block;
+	min-width: 30vw;
+}
 .dialogContainer{
 	margin-right: 0;
 	margin-left: auto;
 	width: 70vw;
 	position: absolute;
 	right: 0px;
+	max-height: 100%;
+	overflow: scroll;
 }
 .generalSentence{
 	margin-top: 5px;
