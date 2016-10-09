@@ -3,27 +3,29 @@
     <div class="container-fluid">
     
     <!-- Toggle in case of SMALL device -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#searchbar">
-        <span class="caret"></span>
-      </button>
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#searchbar">
+            <span class="caret"></span>
+          </button>
+        </div>
     </div>
-    </div>
+
     <div class="collapse navbar-collapse" id="messagebar">
       <!-- Different buttons of navigationbar -->
      <ul class="nav navbar-nav">
           <div class="btn-group btn-group-horizontal button-container">
-                          <label class="btn title-button" id="newMessageButton">
-                              <span  class="messagenavbutton" data-toggle="modal" data-target="#newMessagemodal">New</span>
-                          </label>
+                <label class="btn title-button" id="newMessageButton">
+                    <span  class="messagenavbutton" data-toggle="modal" data-target="#newMessagemodal">New</span>
+                </label>
           </div>
            <div style="position:fixed; right:15px">
-                              <span class="searchButton" data-target="#searchMessage">
-                                 <input type="text" id="searchMessageBox" ng-click="activeLetter = []; showcontacts=contacts" ng-model="search.$" placeholder="Search" name="search">
-                              </span>
+                <span class="searchButton" data-target="#searchMessage">
+                    <input type="text" id="searchMessageBox" ng-click="activeLetter = []; showcontacts=contacts" ng-model="search.$" placeholder="Search" name="search">
+                </span>
           </div>
       </ul>
     </div>
+
 </nav>
 <!-- Space between navigationbar and Contactlist -->
 <div class="spacer"></div>
@@ -38,12 +40,57 @@
 
         </div>
       </div>
-      <div class="dialogContainer">
+      <p ng-show="status.loading" style="position:absolute; top: 150px">loading...</p>
+      <div class="dialogContainer" infinite-scroll="nextPage()" infinite-scroll-disabled="busy" infinite-scroll-distance="0.5">
          <!-- Add all contacts from contactlist -->
-          <div class="dialogMessage" ng-repeat="message in dialog | filter:search">
+        <div class="dialogMessage" ng-repeat="message in showdialog | filter:search">
          <!-- Single Contact from Contactlist -->
-        <dialog-message message="message" ></dialog-message>
+            <dialog-message message="message" ></dialog-message>
 
         </div>
+      </div>
+
+      <div id="sendToThreadBox">
+        <form role="form" name="newMessageform" novalidate>
+            <!-- Part I Name-->
+        <div class="row">            
+            <div class="form-group col-xs-10">
+                    <!-- ng-model makes it possible to directly POST content to server -->
+                    <input type="text" class="form-control" id="add-form-comp" placeholder="Subject" ng-model="message.subject" name="company">
+            </div>
+            <div class="form-group col-xs-7">
+                <div class="btn-group btn-group-horizontal button-container" data-toggle="buttons">
+                    <label class="btn active title-button" ng-model="message.postman">
+                        <input type="radio" name='titel' checked value="Contactify"><img style="height: 20px" src="res/postman/cf.png" />
+                    </label>
+                    <label class="btn title-button" ng-model="message.postman">
+                        <input type="radio" name='titel' value="Mail"><img style="height: 20px" src="res/postman/mail.png" />
+                    </label>
+                    <label class="btn title-button" ng-model="message.postman">
+                        <input type="radio" name='titel' value="WhatsApp"><img style="height: 20px" src="res/postman/wa.png" />
+                    </label>
+                    <label class="btn title-button" ng-model="message.postman">
+                        <input type="radio" name='titel' value="Facebook"><img style="height: 20px" src="res/postman/fb.png" />
+                    </label>
+                    <label class="btn title-button" ng-model="message.postman">
+                        <input type="radio" name='titel' value="Telegram"><img style="height: 20px" src="res/postman/tg.png" />
+                    </label>
+                </div>                    
+            </div>
+            <div class="form-group col-xs-3">
+                <button type="submit" class="btn btn-success pull-left col-xs-4" name="submit" ng-click="submitWrapper(message)" style="min-width: 100px">Send</button> 
+            </div>
+        </div>
+        <!-- makes Text area dynamic -->
+            <script> 
+            function textAreaAdjust(o) {
+                o.style.height = "1px";
+                o.style.height = (25+o.scrollHeight)+"px";
+            }
+            </script>        
+            <div class="form-group">
+                    <textarea id="messageInThread" name="message" onkeyup="textAreaAdjust(this)" placeholder="  Message" ng-model="message.prosa"></textarea>
+            </div>
+        </form>
       </div>
 </div>

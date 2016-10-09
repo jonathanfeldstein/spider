@@ -2,14 +2,14 @@ app.controller('MessagesController', ['$scope','MessagesService','orderByFilter'
 
 function MessagesController($scope, MessagesService, orderBy) {
 
-  //Get all Contacts (Contactbook)
+  //Get complete inbox
     MessagesService.getMessages()
       .success(function(inbox){
         $scope.messages = inbox['messages'];
         $scope.showmessages=$scope.messages;
       });
 
-  //POST information to server
+  //POST newMessage to server
     $scope.postNewMessage = function (message) {
         MessagesService.postNewMessage(message)
           .success(function(data, status, headers, config) {

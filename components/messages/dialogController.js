@@ -1,14 +1,31 @@
 app.controller('DialogController', ['$scope','DialogService','MessagesService', DialogController]);
 
-function DialogController($scope, DialogService, MessagesService) {
-
+function DialogController($scope, DialogService, MessagesService, $timeout, $q) {
+        $scope.dialog= [];
+        $scope.showdialog=[];
+        $scope.page=0;
+        $scope.step=10;
   //Get all Contacts (Contactbook)
     DialogService.getDialog()
       .success(function(story){
         $scope.user_id = story['user_id'];
         $scope.interlocutor = story['interlocutor'];
         $scope.dialog = story['dialog'];
+        $scope.nextPage();
+        $scope.busy=false;
       });
+
+    $scope.nextPage=function(){
+      if($scope.busy){
+        return;
+      }
+      $scope.busy=true;
+      $scope.showdialog = $scope.showdialog.concat($scope.dialog.splice($scope.page*$scope.step,$scope.step));
+      console.log($scope.page);      
+      $scope.page ++;
+      $scope.busy=false;
+      console.log($scope.page);
+    };
 
     MessagesService.getMessages()
       .success(function(inbox){
@@ -16,9 +33,14 @@ function DialogController($scope, DialogService, MessagesService) {
         $scope.showmessages=$scope.messages;
       });
 
-  //POST information to server
-  /*  $scope.postToDialog = function (sentence) {
-        DialogService.postToDialog(sentence)
+    //get actual time
+    $scope.getDatetime = function() {
+      return (new Date).toISOString();
+    };
+
+  //POST newMessage to server
+    $scope.postNewMessage = function (message) {
+        MessagesService.postNewMessage(message)
           .success(function(data, status, headers, config) {
               if (status == 200) {      //needs to be changed to 'OK' once connected to server
                 $scope.errormessages = 'Your form has been sent!';
@@ -30,8 +52,8 @@ function DialogController($scope, DialogService, MessagesService) {
           })
           .error(function(data, status, headers, config) {
               //$scope.progress = data;
-              $scope.errormessages = 'There was a network error. Try again later.';
+              $scope.messages = 'There was a network error. Try again later.';
               console.error(data);
           });
-      }; */
+      };
 };

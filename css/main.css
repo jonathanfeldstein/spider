@@ -7,7 +7,6 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	overflow-x: hidden;
 }
-
 /******************************************************/
 /* HELP CLASSES */
 
@@ -255,7 +254,7 @@ user-select: none;
 	margin-top: 50px;
 	position:fixed;
 	width: 100vw;
-	z-index: 1;
+	z-index: 3;
 	font-weight: bold;
 }
 
@@ -365,6 +364,7 @@ background: repeating-linear-gradient(
 	max-height: 100%;
 	overflow: scroll;
 	overflow-x: hidden;
+	z-index: 2;
 
 }
 
@@ -394,8 +394,8 @@ background: repeating-linear-gradient(
 	width: 70vw;
 	position: absolute;
 	right: 0px;
-	max-height: 100%;
 	overflow: scroll;
+	height: 100%;
 }
 .generalSentence{
 	margin-top: 5px;
@@ -420,6 +420,25 @@ background: repeating-linear-gradient(
 }
 .dialogDate{
 	font-style: italic;
-	font-size: 8px;
+	font-size: 12px;
 	color: #7a7a52;
+}
+
+.main #sendToThreadBox{
+	width: 70vw;
+	max-height: 40vh;
+	padding-top: 10px;
+	padding-left: 15px; 
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	background-color: white;
+	border-top: 1px solid #ccccb3;
+	overflow-y: scroll;
+	overflow-x: hidden; 
+}
+
+#messageInThread{
+	min-width: 100%;
+
 }
