@@ -39,7 +39,7 @@ function DialogController($scope, DialogService, MessagesService, $timeout, $q) 
     };
 
   //POST newMessage to server
-    $scope.postNewMessage = function (message) {
+    $scope.postExtraMessage = function (message) {
         MessagesService.postNewMessage(message)
           .success(function(data, status, headers, config) {
               if (status == 200) {      //needs to be changed to 'OK' once connected to server

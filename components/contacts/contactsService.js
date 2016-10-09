@@ -18,7 +18,7 @@ function ContactsService($http) {
   		}; */
   	//Add new Contact to list OR modifiy existing Contact
   		function postContact(contact){
-  			return $http.post('/toto.php', JSON.stringify(contact));
+  			return $http.post('toto.php', JSON.stringify(contact));
   		};
 
 //Communication with Controller(s)
