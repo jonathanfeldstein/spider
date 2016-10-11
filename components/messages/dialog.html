@@ -40,10 +40,9 @@
 
         </div>
       </div>
-      <p ng-show="status.loading" style="position:absolute; top: 150px">loading...</p>
-      <div class="dialogContainer" infinite-scroll="nextPage()" infinite-scroll-disabled="busy" infinite-scroll-distance="0.5">
+      <div class="dialogContainer" scroll-glue>
          <!-- Add all contacts from contactlist -->
-        <div class="dialogMessage" ng-repeat="message in showdialog | filter:search">
+        <div class="dialogMessage" ng-repeat="message in showdialog | reverse">
          <!-- Single Contact from Contactlist -->
             <dialog-message message="message" ></dialog-message>
 
@@ -81,15 +80,11 @@
                 <button type="submit" class="btn btn-success pull-left col-xs-4" name="submit" ng-click="submitWrapper(message)" style="min-width: 100px">Send</button> 
             </div>
         </div>
-        <!-- makes Text area dynamic -->
-            <script> 
-            function textAreaAdjust(o) {
-                o.style.height = "1px";
-                o.style.height = (25+o.scrollHeight)+"px";
-            }
-            </script>        
+            <script type="text/javascript">
+                init();
+            </script>       
             <div class="form-group">
-                    <textarea id="messageInThread" name="message" onkeyup="textAreaAdjust(this)" placeholder="  Message" ng-model="message.prosa"></textarea>
+                    <textarea  rows="2" style="height:1em; overflow: hidden;" id="messageInThread" name="message" placeholder="  Message" ng-model="message.prosa"></textarea>
             </div>
         </form>
       </div>

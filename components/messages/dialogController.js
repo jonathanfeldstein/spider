@@ -1,31 +1,14 @@
-app.controller('DialogController', ['$scope','DialogService','MessagesService', DialogController]);
+app.controller('DialogController', ['$scope','DialogService','MessagesService', '$timeout', DialogController]);
 
-function DialogController($scope, DialogService, MessagesService, $timeout, $q) {
-        $scope.dialog= [];
-        $scope.showdialog=[];
-        $scope.page=0;
-        $scope.step=10;
+function DialogController($scope, DialogService, MessagesService, $timeout) {
+
   //Get all Contacts (Contactbook)
     DialogService.getDialog()
       .success(function(story){
         $scope.user_id = story['user_id'];
         $scope.interlocutor = story['interlocutor'];
-        $scope.dialog = story['dialog'];
-        $scope.nextPage();
-        $scope.busy=false;
+        $scope.showdialog = story['dialog'];
       });
-
-    $scope.nextPage=function(){
-      if($scope.busy){
-        return;
-      }
-      $scope.busy=true;
-      $scope.showdialog = $scope.showdialog.concat($scope.dialog.splice($scope.page*$scope.step,$scope.step));
-      console.log($scope.page);      
-      $scope.page ++;
-      $scope.busy=false;
-      console.log($scope.page);
-    };
 
     MessagesService.getMessages()
       .success(function(inbox){

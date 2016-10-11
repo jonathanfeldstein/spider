@@ -10,7 +10,7 @@ function DialogService($http) {
 	 * @returns promise
 	 */  
 	function getDialog(){
-		return $http.get('somerandomdialog.json');
+		return $http.get('somerandomdialog.json'); // page
 	};
 	//Get specific Contact with an ID
   	/*	function getContactById(id){

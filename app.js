@@ -1,4 +1,4 @@
-var app = angular.module("ProjectC",['ngRoute']);
+var app = angular.module("ProjectC",['ngRoute','lrInfiniteScroll','luegg.directives']);
 
 app.config(function ($routeProvider) { 
   $routeProvider 
@@ -25,4 +25,10 @@ app.config(function ($routeProvider) {
     .otherwise({ 
       redirectTo: '/home' 
     }); 
+});
+
+app.filter('reverse', function() {
+  return function(items) {
+    return items.slice().reverse();
+  };
 });
