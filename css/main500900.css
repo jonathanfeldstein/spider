@@ -54,6 +54,10 @@ body {
 .spacersmall {
 	height: 10px;
 }
+/* Hide for 0-500 */
+.no500900{
+	display: none;
+}
 /******************************************************/
 /* MODALs GENERAL *************************************/
 
@@ -344,7 +348,8 @@ background: repeating-linear-gradient(
   border: 1px solid #dddddd;
 }
 .messageContainer{
-	height: 25px;
+	padding-top: 5px;
+	height: 35px;
 }
 .messageSender{
 	font-size: 15px;
@@ -375,8 +380,7 @@ background: repeating-linear-gradient(
 .longMessageThread{
 	border-bottom: 1px solid #ccccb3;	
 	display: inline-block;
-	min-width: 30vw; 
-	min-height: 25px;
+	min-width: 30vw;
 }
 .shortMessageThread{
 	border-bottom: 1px solid #ccccb3;

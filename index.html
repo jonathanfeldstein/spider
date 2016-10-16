@@ -12,7 +12,9 @@
 		    <link rel='icon' type='image/png' href='res/logo/logo_tab.png'>
 		
     <!-- Include Stylesheets -->
-    		<link rel='stylesheet' type='text/css' href='css/main.css'>
+    		<link rel='stylesheet' media="(min-width: 900px)" type='text/css' href='css/main.css'>
+        <link rel='stylesheet' media="(max-width: 900px)" type='text/css' href='css/main500900.css'>
+        <link rel='stylesheet' media="(max-width: 500px)" type='text/css' href='css/main0500.css'>
 
 		
     <!-- Include Bootstrap and jQuery -->
@@ -114,7 +116,7 @@
       </nav>
 
   <!-- Space between navigation bar and Content -->
-    <div class="spacersmall"></div>
+    <div class="spacersmall no0500"></div>
   
   <!-- Content -->
 	   <div ng-view></div>

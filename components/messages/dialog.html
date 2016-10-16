@@ -1,5 +1,5 @@
 <!-- Navigationbar of Messenger -->
-<nav class="navbar">
+<nav class="navbar no0500">
     <div class="container-fluid">
     
     <!-- Toggle in case of SMALL device -->
@@ -53,11 +53,11 @@
         <form role="form" name="newMessageform" novalidate>
             <!-- Part I Name-->
         <div class="row">            
-            <div class="form-group col-xs-10">
+            <div class="form-group col-xs-8">
                     <!-- ng-model makes it possible to directly POST content to server -->
                     <input type="text" class="form-control" id="add-form-comp" placeholder="Subject" ng-model="message.subject" name="company">
             </div>
-            <div class="form-group col-xs-7">
+            <div class="form-group col-xs-8 no0500">
                 <div class="btn-group btn-group-horizontal button-container" data-toggle="buttons">
                     <label class="btn active title-button" ng-model="message.postman">
                         <input type="radio" name='titel' checked value="Contactify"><img style="height: 20px" src="res/postman/cf.png" />
@@ -76,8 +76,8 @@
                     </label>
                 </div>                    
             </div>
-            <div class="form-group col-xs-3">
-                <button type="submit" class="btn btn-success pull-left col-xs-4" name="submit" ng-click="submitWrapper(message)" style="min-width: 100px">Send</button> 
+            <div class="form-group col-xs-4">
+                <button type="submit" id="sendButton" class="btn btn-success pull-left col-xs-4" name="submit" ng-click="submitWrapper(message)"><span class="no0500">Send</span><span class="glyphicon glyphicon-send"></span></button> 
             </div>
         </div>
             <script type="text/javascript">

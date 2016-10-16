@@ -54,6 +54,11 @@ body {
 .spacersmall {
 	height: 10px;
 }
+
+/* Hide for 0-500 */
+.no0500{
+	display: none;
+}
 /******************************************************/
 /* MODALs GENERAL *************************************/
 
@@ -359,44 +364,25 @@ background: repeating-linear-gradient(
 /************************************************/
 /*DIALOG*****************************************/
 .threadContainer{
-	width: 30vw;
-	position: absolute;
-	left: 0;
-	top: 0;
-	padding-top: 110px;
-	border-right: 1px solid #ccccb3;
-	height: 100%;
-	overflow: scroll;
-	overflow-x: hidden;
-	z-index: 2;
-
+	display: none;
 }
 
 .longMessageThread{
-	border-bottom: 1px solid #ccccb3;	
-	display: inline-block;
-	min-width: 30vw; 
-	min-height: 25px;
+	display: none;
 }
 .shortMessageThread{
-	border-bottom: 1px solid #ccccb3;
-	display: inline-block;
-	min-width: 30vw;
+	display: none;
 }
 .longMessageBusinessThread{
-	border-bottom: 1px solid #ccccb3;
-	display: inline-block;
-	min-width: 30vw;
+	display: none;
 }
 .shortMessageBusinessThread{
-	border-bottom: 1px solid #ccccb3;
-	display: inline-block;
-	min-width: 30vw;
+	display: none;
 }
 .dialogContainer{
 	margin-right: 0;
 	margin-left: auto;
-	width: 70vw;
+	width: 100%;
 	position: absolute;
 	right: 0px;
 	overflow: scroll;
@@ -410,7 +396,7 @@ background: repeating-linear-gradient(
 }
 .userSentence{
 	background-color:  #ccccb3;
-	max-width:40vw;
+	max-width:80%;
 	padding: 5px;
 	position: relative;
 	margin-right: 10px;
@@ -419,7 +405,7 @@ background: repeating-linear-gradient(
 }
 .interlocutorSentence{
 	background-color:  white;
-	max-width:40vw;
+	max-width:80%;
 	padding:5px;
 	margin-left: 10px;
 }
@@ -432,7 +418,7 @@ background: repeating-linear-gradient(
 .main #sendToThreadBox{
 	padding-top: 5px;
 	padding-bottom: 5px;
-	width: 70vw;
+	width: 100%;
 	max-height: 40vh;
 	padding-top: 10px;
 	padding-left: 15px; 
@@ -444,9 +430,8 @@ background: repeating-linear-gradient(
 	overflow-y: scroll;
 	overflow-x: hidden; 
 }
-
 #sendButton{
-	min-width: 100px;
+	min-width: 60px;
 }
 #messageInThread{
 	min-width: 100%;
