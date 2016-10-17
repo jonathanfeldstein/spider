@@ -1,0 +1,71 @@
+<!-- Navigationbar of Messenger -->
+<nav class="navbar">
+    <div class="container-fluid">
+    
+    <!-- Toggle in case of SMALL device -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#searchbar">
+        <span class="caret"></span>
+      </button>
+    </div>
+    </div>
+    <div class="collapse navbar-collapse" id="messagebar">
+      <!-- Different buttons of navigationbar -->
+     <ul class="nav navbar-nav">
+          <div class="btn-group btn-group-horizontal button-container">
+                          <label class="btn title-button" id="newMessageButton">
+                              <span  class="messagenavbutton" data-toggle="modal" data-target="#newMessagemodal">New</span>
+                          </label>
+          </div>
+          <div class="btn-group btn-group-horizontal button-container" data-toggle="buttons">
+                          <label class="btn active title-button messagenavbutton" ng-click="sortByChronos('importance')">
+                              <span>Importance</span>
+                          </label>                    
+                          <label class="btn title-button messagenavbutton" ng-click="sortByChronos('sentdate')">
+                              <span>Chronologically</span>
+                          </label>
+
+          </div>
+          <div class="btn-group btn-group-horizontal button-container" data-toggle="buttons">
+                          <label class="btn active title-button messagenavbutton" ng-click='filterIsBusiness="all"'>
+                              <span>All</span>
+                          </label>                    
+                          <label class="btn title-button messagenavbutton" ng-click='filterIsBusiness="yes"'>
+                              <span>Business</span>
+                          </label>
+                          <label class="btn title-button messagenavbutton" ng-click='filterIsBusiness="no"'>
+                              <span>Private</span>
+                          </label>
+          </div>
+          <div class="btn-group btn-group-horizontal button-container" data-toggle="buttons">
+                          <label class="btn active title-button messagenavbutton" ng-click='filterByLength="all"'>
+                              <span>All</span>
+                          </label>                    
+                          <label class="btn title-button messagenavbutton" ng-click='filterByLength="long"'>
+                              <span>Letter</span>
+                          </label>
+                          <label class="btn title-button messagenavbutton" ng-click='filterByLength="short"'>
+                              <span>Chat</span>
+                          </label>
+          </div>
+          <div style="position:fixed; right:15px">
+                              <span class="searchButton" data-target="#searchMessage">
+                                 <input type="text" id="searchMessageBox" ng-click="activeLetter = []; showcontacts=contacts" ng-model="search.$" placeholder="Search" name="search">
+                              </span>
+          </div>
+      </ul>
+    </div>
+</nav>
+  <!-- Directive for modal-form to add Contact -->
+    <new-message submit-func='postNewMessage'></new-message>
+<!-- Contactlist -->
+<div class="main">
+      <div class="container">
+         <!-- Add all contacts from contactlist -->
+         <div class="singleMessage" ng-repeat="message in showmessages | filter:search"  ng-show="sortByLength(message, filterByLength, filterIsBusiness)">
+			   <!-- Single Contact from Contactlist -->
+				<single-message-mobile onclick="location.href='#/dialog'" style="cursor:pointer;" message="message" ></single-message-mobile>
+
+        </div>
+      </div>
+</div>

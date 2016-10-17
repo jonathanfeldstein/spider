@@ -1,0 +1,91 @@
+<!-- Navigationbar of Messenger -->
+<nav class="navbar">
+    <div class="container-fluid">
+    
+    <!-- Toggle in case of SMALL device -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#searchbar">
+            <span class="caret"></span>
+          </button>
+        </div>
+    </div>
+
+    <div class="collapse navbar-collapse" id="messagebar">
+      <!-- Different buttons of navigationbar -->
+     <ul class="nav navbar-nav">
+          <div class="btn-group btn-group-horizontal button-container">
+                <label class="btn title-button" id="newMessageButton">
+                    <span  class="messagenavbutton" data-toggle="modal" data-target="#newMessagemodal">New</span>
+                </label>
+          </div>
+           <div style="position:fixed; right:15px">
+                <span class="searchButton" data-target="#searchMessage">
+                    <input type="text" id="searchMessageBox" ng-click="activeLetter = []; showcontacts=contacts" ng-model="search.$" placeholder="Search" name="search">
+                </span>
+          </div>
+      </ul>
+    </div>
+
+</nav>
+<!-- Space between navigationbar and Contactlist -->
+<div class="spacer"></div>
+<div class="spacersmall"></div>
+<!-- Contactlist -->
+<div class="main">
+      <div class="threadContainer">
+         <!-- Add all contacts from contactlist -->
+          <div class="dialogThread" ng-repeat="message in showmessages">
+         <!-- Single Contact from Contactlist -->
+        <single-thread onclick="location.href='#/dialog'" style="cursor:pointer;" message="message" ></single-thread>
+
+        </div>
+      </div>
+      <div id="dialogContainer" scroll-glue>
+         <!-- Add all contacts from contactlist -->
+        <div class="dialogMessage" ng-repeat="message in showdialog | reverse">
+         <!-- Single Contact from Contactlist -->
+            <dialog-message message="message" ></dialog-message>
+
+        </div>
+      </div>
+
+      <div id="sendToThreadBox">
+        <form role="form" name="newMessageform" novalidate>
+            <!-- Part I Name-->
+        <div class="row">            
+            <div class="form-group col-xs-8">
+                    <!-- ng-model makes it possible to directly POST content to server -->
+                    <input type="text" class="form-control" id="add-form-comp" placeholder="Subject" ng-model="message.subject" name="company">
+            </div>
+            <div class="form-group col-xs-8">
+                <div class="btn-group btn-group-horizontal button-container" data-toggle="buttons">
+                    <label class="btn active title-button" ng-model="message.postman">
+                        <input type="radio" name='titel' checked value="Contactify"><img style="height: 20px" src="res/postman/cf.png" />
+                    </label>
+                    <label class="btn title-button" ng-model="message.postman">
+                        <input type="radio" name='titel' value="Mail"><img style="height: 20px" src="res/postman/mail.png" />
+                    </label>
+                    <label class="btn title-button" ng-model="message.postman">
+                        <input type="radio" name='titel' value="WhatsApp"><img style="height: 20px" src="res/postman/wa.png" />
+                    </label>
+                    <label class="btn title-button" ng-model="message.postman">
+                        <input type="radio" name='titel' value="Facebook"><img style="height: 20px" src="res/postman/fb.png" />
+                    </label>
+                    <label class="btn title-button" ng-model="message.postman">
+                        <input type="radio" name='titel' value="Telegram"><img style="height: 20px" src="res/postman/tg.png" />
+                    </label>
+                </div>                    
+            </div>
+            <div class="form-group col-xs-4">
+                <button type="submit" id="sendButton" class="btn btn-success pull-left col-xs-4" name="submit" ng-click="submitWrapper(message)">Send<span class="glyphicon glyphicon-send"></span></button> 
+            </div>
+        </div>
+            <script type="text/javascript">
+                init();
+            </script>       
+            <div class="form-group">
+                    <textarea  rows="2" style="height:1em; overflow: hidden;" id="messageInThread" name="message" placeholder="  Message" ng-model="message.prosa"></textarea>
+            </div>
+        </form>
+      </div>
+</div>

@@ -371,32 +371,36 @@ background: repeating-linear-gradient(
 	z-index: 2;
 
 }
-
+div .dialogThread{
+	padding-bottom: 0;
+	margin: 0;
+}
 .longMessageThread{
-	border-bottom: 1px solid #ccccb3;	
+background-color: #d0e2fb;
+	border-bottom: 1px solid #ccccb3;
 	display: inline-block;
-	min-width: 30vw; 
-	min-height: 25px;
+	min-width: 30vw;
 }
 .shortMessageThread{
+background-color: #fafcb6;
 	border-bottom: 1px solid #ccccb3;
 	display: inline-block;
 	min-width: 30vw;
 }
-.longMessageBusinessThread{
-	border-bottom: 1px solid #ccccb3;
-	display: inline-block;
-	min-width: 30vw;
-}
-.shortMessageBusinessThread{
-	border-bottom: 1px solid #ccccb3;
-	display: inline-block;
-	min-width: 30vw;
-}
-.dialogContainer{
+
+#dialogContainer{
 	margin-right: 0;
 	margin-left: auto;
 	width: 70vw;
+	position: absolute;
+	right: 0px;
+	overflow: scroll;
+	height: 70vh;
+}
+#dialogContainerMobile{
+	margin-right: 0;
+	margin-left: auto;
+	width: 100%;
 	position: absolute;
 	right: 0px;
 	overflow: scroll;
@@ -410,7 +414,7 @@ background: repeating-linear-gradient(
 }
 .userSentence{
 	background-color:  #ccccb3;
-	max-width:40vw;
+	max-width:50vw;
 	padding: 5px;
 	position: relative;
 	margin-right: 10px;
@@ -419,7 +423,7 @@ background: repeating-linear-gradient(
 }
 .interlocutorSentence{
 	background-color:  white;
-	max-width:40vw;
+	max-width:50vw;
 	padding:5px;
 	margin-left: 10px;
 }
@@ -445,6 +449,21 @@ background: repeating-linear-gradient(
 	overflow-x: hidden; 
 }
 
+.main #sendToThreadBoxMobile{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	width: 100%;
+	max-height: 40vh;
+	padding-top: 10px;
+	padding-left: 15px; 
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	background-color: white;
+	border-top: 1px solid #ccccb3;
+	overflow-y: scroll;
+	overflow-x: hidden;  
+}
 #sendButton{
 	min-width: 100px;
 }
