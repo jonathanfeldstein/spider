@@ -1,0 +1,92 @@
+<li  ng-if="message.prosa.length>200 && message.business=='no'" class="longMessage" data-ng-hide="shortHidden">   
+    <div class="messageContainer">
+     <!--   <contact-total contact="contact"></contact-total> -->
+              <div class="col-sm-5">
+                <div class="messageSender" >{{message.interlocutor}}</div>  <!-- data-toggle="modal" data-target="{{ '#contact' + contact.id }}" -->
+              </div>
+              <div class="col-sm-3">
+                    <div class="messageInfo">{{message.subject}}</div>
+              </div>
+            <div class="col-sm-8">
+                  <div class="messageInfo">{{message.prosa | limitTo:30}} ...</div>
+            </div>
+                <div class="col-sm-3">
+                  <div class="messageInfo">{{message.sentdate | date :'shortDate'}}</div>
+                </div>
+                <div class="col-sm-1">
+                  <img style="height: 20px" ng-src="{{message.postman == 'Mail' && 'res/postman/mail.png' || message.postman == 'WhatsApp' && 'res/postman/wa.png' || message.postman == 'Facebook' && 'res/postman/fb.png' || message.postman == 'Contactify' && 'res/postman/cf.png' || message.postman == 'Telegram' && 'res/postman/tg.png'}}" />
+                </div>
+        </div>
+    </div>
+
+    <div style="clear: left;"></div>
+</li>
+<li ng-if="message.prosa.length<=200 && message.business=='no'" class="shortMessage" data-ng-hide="longHidden">   
+    <div class="messageContainer"  >
+     <!--   <contact-total contact="contact"></contact-total> -->
+              <div class="col-sm-5">
+                <div class="messageSender" >{{message.interlocutor}}</div>  <!-- data-toggle="modal" data-target="{{ '#contact' + contact.id }}" -->
+              </div>
+              <div class="col-sm-3">
+                    <div class="messageInfo">{{message.subject}}</div>
+              </div>
+            <div class="col-sm-8">
+                  <div class="messageInfo">{{message.prosa | limitTo:30}} ...</div>
+            </div>
+                <div class="col-sm-3">
+                  <div class="messageInfo">{{message.sentdate | date :'shortDate'}}</div>
+                </div>
+                <div class="col-sm-1">
+                  <img style="height: 20px" ng-src="{{message.postman == 'Mail' && 'res/postman/mail.png' || message.postman == 'WhatsApp' && 'res/postman/wa.png' || message.postman == 'Facebook' && 'res/postman/fb.png' || message.postman == 'Contactify' && 'res/postman/cf.png' || message.postman == 'Telegram' && 'res/postman/tg.png'}}" />
+                </div>
+        </div>
+    </div>
+
+    <div style="clear: left;"></div>
+</li>
+<li  ng-if="message.prosa.length>200 && message.business=='yes'" class="longMessageBusiness" data-ng-hide="shortHidden">   
+    <div class="messageContainer">
+     <!--   <contact-total contact="contact"></contact-total> -->
+              <div class="col-sm-5">
+                <div class="messageSender" >{{message.interlocutor}}</div>  <!-- data-toggle="modal" data-target="{{ '#contact' + contact.id }}" -->
+              </div>
+              <div class="col-sm-3">
+                    <div class="messageInfo">{{message.subject}}</div>
+              </div>
+            <div class="col-sm-8">
+                  <div class="messageInfo">{{message.prosa | limitTo:30}} ...</div>
+            </div>
+                <div class="col-sm-3">
+                  <div class="messageInfo">{{message.sentdate | date :'shortDate'}}</div>
+                </div>
+                <div class="col-sm-1">
+                  <img style="height: 20px" ng-src="{{message.postman == 'Mail' && 'res/postman/mail.png' || message.postman == 'WhatsApp' && 'res/postman/wa.png' || message.postman == 'Facebook' && 'res/postman/fb.png' || message.postman == 'Contactify' && 'res/postman/cf.png' || message.postman == 'Telegram' && 'res/postman/tg.png'}}" />
+                </div>
+        </div>
+    </div>
+
+    <div style="clear: left;"></div>
+</li>
+<li ng-if="message.prosa.length<=200 && message.business=='yes'" class="shortMessageBusiness" data-ng-hide="longHidden">   
+    <div class="messageContainer"  >
+     <!--   <contact-total contact="contact"></contact-total> -->
+              <div class="col-sm-5">
+                <div class="messageSender" >{{message.interlocutor}}</div>  <!-- data-toggle="modal" data-target="{{ '#contact' + contact.id }}" -->
+              </div>
+              <div class="col-sm-3">
+                    <div class="messageInfo">{{message.subject}}</div>
+              </div>
+            <div class="col-sm-8">
+                  <div class="messageInfo">{{message.prosa | limitTo:30}} ...</div>
+            </div>
+                <div class="col-sm-3">
+                  <div class="messageInfo">{{message.sentdate | date :'shortDate'}}</div>
+                </div>
+                <div class="col-sm-1">
+                  <img style="height: 20px" ng-src="{{message.postman == 'Mail' && 'res/postman/mail.png' || message.postman == 'WhatsApp' && 'res/postman/wa.png' || message.postman == 'Facebook' && 'res/postman/fb.png' || message.postman == 'Contactify' && 'res/postman/cf.png' || message.postman == 'Telegram' && 'res/postman/tg.png'}}" />
+                </div>
+        </div>
+    </div>
+
+    <div style="clear: left;"></div>
+</li>

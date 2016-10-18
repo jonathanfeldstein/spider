@@ -1,0 +1,25 @@
+<li class="list-group-item">   
+    <div class="grow">
+        <contact-total contact="contact"></contact-total>
+              <div class="col-sm-6 userContact">
+                <span data-toggle="modal" data-target="{{ '#contact' + contact.id }}">{{contact.firstname}} {{contact.lastname}}</span>
+              </div>
+              <div class="col-sm-4 additionalInformationMobile">
+                  <div class="contactInfo details">
+                    <div class="contactPhone">{{contact.id}}</div>
+                    <div class="contactMail">{{contact.mail}}</div>
+                  </div>
+              </div>
+                <div class="col-sm-5 meeting additionalInformationMobile">
+                  <a href="#">Last Meeting </a> 
+                  <div class="details">{{contact.lastmeeting | date}}</div>
+                </div>
+                <div class="col-sm-5 meeting additionalInformationMobile">
+                  <a href="#">Next Meeting </a> 
+                  <div class="details">{{contact.nextmeeting | date}}</div>
+                </div>
+        </div>
+    </div>
+
+    <div style="clear: left;"></div>
+</li>

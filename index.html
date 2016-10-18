@@ -30,6 +30,7 @@
         <script src="node_modules/angular-material/angular-material.js"></script>
         <script src="node_modules/angular-route/angular-route.js"></script>
         <script src="node_modules/angular-material-icons/angular-material-icons.js"></script>
+
         <script src="node_modules/ng-infinite-scroll/lrInfiniteScroll.js"></script>
         <script src="node_modules/angularjs-scroll-glue/src/scrollglue.js"></script>
         <script src="node_modules/angular-responsive-master/src/responsive-directive.js"></script>
@@ -42,6 +43,8 @@
     <!-- Angular for Contacts -->
     		<script src='components/contacts/contactsController.js'></script>
     		<script src='components/contacts/contactInfo.js'></script>
+        <script src='components/contacts/contactInfoMobile.js'></script>
+        <script src='components/contacts/contactInfoTablet.js'></script>
         <script src='components/contacts/contactTotal.js'></script>
     		<script src='components/contacts/addContact.js'></script>
         <script src='components/contacts/contactsService.js'></script>
@@ -49,6 +52,7 @@
         <script src='components/messages/messagesController.js'></script>
         <script src='components/messages/singleMessage.js'></script>
         <script src='components/messages/singleMessageMobile.js'></script>
+        <script src='components/messages/singleMessageTablet.js'></script>
         <script src='components/messages/newMessage.js'></script>
         <script src='components/messages/messagesService.js'></script>
     <!-- Angular for Dialog -->
@@ -89,7 +93,7 @@
             <div class="leftend">  
               <ul class="nav navbar-nav navbar-left">
                 <li class="dropdown">
-                  <a class="dropdown-toggle" data-toggle="dropdown" href="#/company">COMPANY
+                  <a class="dropdown-toggle" data-toggle="dropdown">COMPANY
                     <span class="caret"></span>
                   </a>
                   <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
@@ -115,8 +119,6 @@
         </div>
       </nav>
 
-  <!-- Space between navigation bar and Content -->
-    <div class="spacersmall no0767"></div>
   
   <!-- Content -->
 	   <div ng-view></div>

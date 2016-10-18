@@ -1,0 +1,41 @@
+<!-- Navigationbar of Contactbook -->
+<nav class="navbar">
+    <div class="collapse navbar-collapse" id="searchbar">
+      <!-- Different buttons of navigationbar -->
+        <div id="addButton" data-toggle="modal" data-target="#addContactmodal">Add</div>
+        <div class="dropdown">
+                  <div class="dropdown-toggle" data-toggle="dropdown">Order By<span class="caret"></span></div>                     
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+                    <li><div  id="sortFirstButton" data-toggle="modal" data-target="#login-modal" ng-click="sortBy('firstname')">First Name</div></li>
+                        <span class="sortorder" ng-show="propertyName === 'firstname'" ng-class="{reverse: reverse}"></span>
+                    <li><div  id="sortLastButton" data-toggle="modal" data-target="#login-modal" ng-click="sortBy('lastname')">Last Name</div></li>
+                        <span class="sortorder" ng-show="propertyName === 'lastname'" ng-class="{reverse: reverse}"></span>
+                    <li><div  id="sortFirstButton" data-toggle="modal" data-target="#login-modal" ng-click="sortByOneWay('nextmeeting')">Next Meeting</div></li>
+                        <span class="sortorder" ng-show="propertyName === 'nextmeeting'"></span>
+                  </ul>
+        </div>
+        <div class="searchButton">
+          <span data-target="#searchContact">
+             <input type="text" id="searchContactBox" ng-click="activeLetter = []; showcontacts=contacts" ng-model="search.$" placeholder="Search" name="search">
+          </span>
+        </div>
+    </div>
+</nav>
+	<!-- Directive for modal-form to add Contact -->
+		<add-contact submit-func='postContact'></add-contact>
+
+<!-- Space between navigationbar and Contactlist -->
+<div class="spacer"></div>
+<div class="spacersmall"></div>
+<!-- Contactlist -->
+<div class="main">
+      <div class="container">
+         <!-- Add all contacts from contactlist -->
+         <div class="singleContact" ng-repeat="contact in showcontacts | filter:search">
+			   
+			   <!-- Single Contact from Contactlist -->
+				<contact-info-mobile contact="contact" ></contact-info-mobile>
+
+        </div>
+      </div>
+</div>

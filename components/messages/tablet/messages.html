@@ -14,38 +14,38 @@
      <ul class="nav navbar-nav">
           <div class="btn-group btn-group-horizontal button-container">
                           <label class="btn title-button" id="newMessageButton">
-                              <span  class="messagenavbutton" data-toggle="modal" data-target="#newMessagemodal">New</span>
+                              <span  class="messagenavbutton" data-toggle="modal" data-target="#newMessagemodal"><span class="glyphicon glyphicon-pencil"></span></span>
                           </label>
           </div>
           <div class="btn-group btn-group-horizontal button-container" data-toggle="buttons">
-                          <label class="btn active title-button messagenavbutton" ng-click="sortByChronos('importance')">
-                              <span>Importance</span>
+                          <label class="btn active title-button messagenavbuttonTablet" ng-click="sortByChronos('importance')">
+                              <span class="glyphicon glyphicon-star-empty"></span>
                           </label>                    
-                          <label class="btn title-button messagenavbutton" ng-click="sortByChronos('sentdate')">
-                              <span>Chronologically</span>
+                          <label class="btn title-button messagenavbuttonTablet" ng-click="sortByChronos('sentdate')">
+                              <span class="glyphicon glyphicon-time"></span>
                           </label>
 
           </div>
           <div class="btn-group btn-group-horizontal button-container" data-toggle="buttons">
-                          <label class="btn active title-button messagenavbutton" ng-click='filterIsBusiness="all"'>
+                          <label class="btn active title-button messagenavbuttonTablet" ng-click='filterIsBusiness="all"'>
                               <span>All</span>
                           </label>                    
-                          <label class="btn title-button messagenavbutton" ng-click='filterIsBusiness="yes"'>
-                              <span>Business</span>
+                          <label class="btn title-button messagenavbuttonTablet" ng-click='filterIsBusiness="yes"'>
+                              <span class="glyphicon glyphicon-briefcase"></span>
                           </label>
-                          <label class="btn title-button messagenavbutton" ng-click='filterIsBusiness="no"'>
-                              <span>Private</span>
+                          <label class="btn title-button messagenavbuttonTablet" ng-click='filterIsBusiness="no"'>
+                              <span class="glyphicon glyphicon-glass"></span>
                           </label>
           </div>
           <div class="btn-group btn-group-horizontal button-container" data-toggle="buttons">
-                          <label class="btn active title-button messagenavbutton" ng-click='filterByLength="all"'>
+                          <label class="btn active title-button messagenavbuttonTablet" ng-click='filterByLength="all"'>
                               <span>All</span>
                           </label>                    
-                          <label class="btn title-button messagenavbutton" ng-click='filterByLength="long"'>
-                              <span>Letter</span>
+                          <label class="btn title-button messagenavbuttonTablet" ng-click='filterByLength="long"'>
+                              <span class="glyphicon glyphicon-envelope"></span>
                           </label>
-                          <label class="btn title-button messagenavbutton" ng-click='filterByLength="short"'>
-                              <span>Chat</span>
+                          <label class="btn title-button messagenavbuttonTablet" ng-click='filterByLength="short"'>
+                              <span class="glyphicon glyphicon-transfer"></span>
                           </label>
           </div>
           <div style="position:fixed; right:15px">
@@ -69,7 +69,7 @@
          <!-- Add all contacts from contactlist -->
          <div class="singleMessage" ng-repeat="message in showmessages | filter:search"  ng-show="sortByLength(message, filterByLength, filterIsBusiness)">
 			   <!-- Single Contact from Contactlist -->
-				<single-message onclick="location.href='#/dialog'" style="cursor:pointer;" message="message" ></single-message>
+				<single-message-tablet onclick="location.href='#/dialog'" style="cursor:pointer;" message="message" ></single-message-tablet>
 
         </div>
       </div>
