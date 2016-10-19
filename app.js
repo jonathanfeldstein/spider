@@ -1,4 +1,4 @@
-var app = angular.module("ProjectC",['ngRoute','angular-responsive','luegg.directives']);
+var app = angular.module("ProjectC",['ngRoute','angular-responsive','luegg.directives','angularMoment','lrInfiniteScroll']);
     
 
 app.config(function ($routeProvider, responsiveHelperProvider) {
@@ -37,8 +37,3 @@ app.config(function ($routeProvider, responsiveHelperProvider) {
     }); 
 });
 
-app.filter('reverse', function() {
-  return function(items) {
-    return items.slice().reverse();
-  };
-});
