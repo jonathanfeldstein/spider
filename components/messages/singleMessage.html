@@ -8,10 +8,13 @@
                     <div class="messageInfo">{{message.subject}}</div>
               </div>
             <div class="col-sm-10">
-                  <div class="messageInfo">{{message.prosa | limitTo:75}} ...</div>
+                  <div class="messageInfo">{{message.prosa | limitTo:50}} ...</div>
             </div>
                 <div class="col-sm-3">
-                  <div class="messageInfo"><span am-time-ago="message.sentdate"></span></div>
+                      <div class="messageInfo">
+                          <span ng-if="checkDateDifference(message.sentdate) == true" am-time-ago="message.sentdate"></span>
+                          <div ng-if="checkDateDifference(message.sentdate) == false" class="messageInfo">{{message.sentdate | date}}</div>
+                      </div>
                 </div>
                 <div class="col-sm-1">
                   <img style="height: 20px" ng-src="{{message.postman == 'Mail' && 'res/postman/mail.png' || message.postman == 'WhatsApp' && 'res/postman/wa.png' || message.postman == 'Facebook' && 'res/postman/fb.png' || message.postman == 'Contactify' && 'res/postman/cf.png' || message.postman == 'Telegram' && 'res/postman/tg.png'}}" />
@@ -31,10 +34,13 @@
                     <div class="messageInfo">{{message.subject}}</div>
               </div>
             <div class="col-sm-10">
-                  <div class="messageInfo">{{message.prosa | limitTo:75}} ...</div>
+                  <div class="messageInfo">{{message.prosa | limitTo:50}} ...</div>
             </div>
                 <div class="col-sm-3">
-                  <div class="messageInfo"><span am-time-ago="message.sentdate"></span></div>
+                      <div class="messageInfo">
+                          <span ng-if="checkDateDifference(message.sentdate) == true" am-time-ago="message.sentdate"></span>
+                          <div ng-if="checkDateDifference(message.sentdate) == false" class="messageInfo">{{message.sentdate | date}}</div>
+                      </div>
                 </div>
                 <div class="col-sm-1">
                   <img style="height: 20px" ng-src="{{message.postman == 'Mail' && 'res/postman/mail.png' || message.postman == 'WhatsApp' && 'res/postman/wa.png' || message.postman == 'Facebook' && 'res/postman/fb.png' || message.postman == 'Contactify' && 'res/postman/cf.png' || message.postman == 'Telegram' && 'res/postman/tg.png'}}" />
@@ -54,10 +60,13 @@
                     <div class="messageInfo">{{message.subject}}</div>
               </div>
             <div class="col-sm-10">
-                  <div class="messageInfo">{{message.prosa | limitTo:75}} ...</div>
+                  <div class="messageInfo">{{message.prosa | limitTo:50}} ...</div>
             </div>
                 <div class="col-sm-3">
-                  <div class="messageInfo"><span am-time-ago="message.sentdate"></span></div>
+                      <div class="messageInfo">
+                          <span ng-if="checkDateDifference(message.sentdate) == true" am-time-ago="message.sentdate"></span>
+                          <div ng-if="checkDateDifference(message.sentdate) == false" class="messageInfo">{{message.sentdate | date}}</div>
+                      </div>
                 </div>
                 <div class="col-sm-1">
                   <img style="height: 20px" ng-src="{{message.postman == 'Mail' && 'res/postman/mail.png' || message.postman == 'WhatsApp' && 'res/postman/wa.png' || message.postman == 'Facebook' && 'res/postman/fb.png' || message.postman == 'Contactify' && 'res/postman/cf.png' || message.postman == 'Telegram' && 'res/postman/tg.png'}}" />
@@ -77,10 +86,13 @@
                     <div class="messageInfo">{{message.subject}}</div>
               </div>
             <div class="col-sm-10">
-                  <div class="messageInfo">{{message.prosa | limitTo:75}} ...</div>
+                  <div class="messageInfo">{{message.prosa | limitTo:50}} ...</div>
             </div>
                 <div class="col-sm-3">
-                  <div class="messageInfo"><span am-time-ago="message.sentdate"></span></div>
+                      <div class="messageInfo">
+                          <span ng-if="checkDateDifference(message.sentdate) == true" am-time-ago="message.sentdate"></span>
+                          <div ng-if="checkDateDifference(message.sentdate) == false" class="messageInfo">{{message.sentdate | date}}</div>
+                      </div>
                 </div>
                 <div class="col-sm-1">
                   <img style="height: 20px" ng-src="{{message.postman == 'Mail' && 'res/postman/mail.png' || message.postman == 'WhatsApp' && 'res/postman/wa.png' || message.postman == 'Facebook' && 'res/postman/fb.png' || message.postman == 'Contactify' && 'res/postman/cf.png' || message.postman == 'Telegram' && 'res/postman/tg.png'}}" />

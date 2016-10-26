@@ -5,7 +5,10 @@
                 <div class="messageSender" >{{message.interlocutor}}</div>  <!-- data-toggle="modal" data-target="{{ '#contact' + contact.id }}" -->
               </div>
                 <div class="infoCellSmall">
-                  <div class="messageInfo">{{message.sentdate | date : 'shortDate'}}</div>
+                      <div class="messageInfo">
+                          <span ng-if="checkDateDifference(message.sentdate) == true" am-time-ago="message.sentdate"></span>
+                          <div ng-if="checkDateDifference(message.sentdate) == false" class="messageInfo">{{message.sentdate | date : 'shortDate'}}</div>
+                      </div>                  
                 </div>
                 <div class="logoMobile">
                   <img style="height: 15px" ng-src="{{message.postman == 'Mail' && 'res/postman/mail.png' || message.postman == 'WhatsApp' && 'res/postman/wa.png' || message.postman == 'Facebook' && 'res/postman/fb.png' || message.postman == 'Contactify' && 'res/postman/cf.png' || message.postman == 'Telegram' && 'res/postman/tg.png'}}" />
@@ -25,7 +28,10 @@
                 <div class="messageSender" >{{message.interlocutor}}</div>  <!-- data-toggle="modal" data-target="{{ '#contact' + contact.id }}" -->
               </div>
                 <div class="infoCellSmall">
-                  <div class="messageInfo">{{message.sentdate | date : 'shortDate'}}</div>
+                      <div class="messageInfo">
+                          <span ng-if="checkDateDifference(message.sentdate) == true" am-time-ago="message.sentdate"></span>
+                          <div ng-if="checkDateDifference(message.sentdate) == false" class="messageInfo">{{message.sentdate | date : 'shortDate'}}</div>
+                      </div>                  
                 </div>
                 <div class="logoMobile">
                   <img style="height: 15px" ng-src="{{message.postman == 'Mail' && 'res/postman/mail.png' || message.postman == 'WhatsApp' && 'res/postman/wa.png' || message.postman == 'Facebook' && 'res/postman/fb.png' || message.postman == 'Contactify' && 'res/postman/cf.png' || message.postman == 'Telegram' && 'res/postman/tg.png'}}" />
@@ -46,7 +52,10 @@
                 <div class="messageSender" >{{message.interlocutor}}</div>  <!-- data-toggle="modal" data-target="{{ '#contact' + contact.id }}" -->
               </div>
                 <div class="infoCellSmall">
-                  <div class="messageInfo">{{message.sentdate | date : 'shortDate'}}</div>
+                      <div class="messageInfo">
+                          <span ng-if="checkDateDifference(message.sentdate) == true" am-time-ago="message.sentdate"></span>
+                          <div ng-if="checkDateDifference(message.sentdate) == false" class="messageInfo">{{message.sentdate | date : 'shortDate'}}</div>
+                      </div>                  
                 </div>
                 <div class="logoMobile">
                   <img style="height: 15px" ng-src="{{message.postman == 'Mail' && 'res/postman/mail.png' || message.postman == 'WhatsApp' && 'res/postman/wa.png' || message.postman == 'Facebook' && 'res/postman/fb.png' || message.postman == 'Contactify' && 'res/postman/cf.png' || message.postman == 'Telegram' && 'res/postman/tg.png'}}" />
@@ -66,7 +75,10 @@
                 <div class="messageSender" >{{message.interlocutor}}</div>  <!-- data-toggle="modal" data-target="{{ '#contact' + contact.id }}" -->
               </div>
                 <div class="infoCellSmall">
-                  <div class="messageInfo">{{message.sentdate | date : 'shortDate'}}</div>
+                      <div class="messageInfo">
+                          <span ng-if="checkDateDifference(message.sentdate) == true" am-time-ago="message.sentdate"></span>
+                          <div ng-if="checkDateDifference(message.sentdate) == false" class="messageInfo">{{message.sentdate | date : 'shortDate'}}</div>
+                      </div>  
                 </div>
                 <div class="logoMobile">
                   <img style="height: 15px" ng-src="{{message.postman == 'Mail' && 'res/postman/mail.png' || message.postman == 'WhatsApp' && 'res/postman/wa.png' || message.postman == 'Facebook' && 'res/postman/fb.png' || message.postman == 'Contactify' && 'res/postman/cf.png' || message.postman == 'Telegram' && 'res/postman/tg.png'}}" />

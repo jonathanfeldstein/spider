@@ -1,13 +1,14 @@
 app.controller('MessagesController', ['$scope','MessagesService','orderByFilter', MessagesController]);
 
 function MessagesController($scope, MessagesService, orderBy) {
-
+      var oneDay = 24 * 60 * 60 * 1000;
   //Get complete inbox
     MessagesService.getMessages()
       .success(function(inbox){
         $scope.messages = inbox['messages'];
         $scope.showmessages=$scope.messages;
       });
+ 
 
   //POST newMessage to server
     $scope.postNewMessage = function (message) {

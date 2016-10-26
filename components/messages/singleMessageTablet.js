@@ -4,6 +4,17 @@ app.directive('singleMessageTablet', function() {
     scope: { 
       message: '=' 
     }, 
-    templateUrl: 'components/messages/singleMessageTablet.html' 
+    templateUrl: 'components/messages/singleMessageTablet.html',
+    link: function(scope, elem, attrs){	      
+	    scope.checkDateDifference = function(messagesentdate){
+	    	var todayDate = Date.now();
+	    	var oneDay = 24*60*60*1000;
+	            if(todayDate-messagesentdate < oneDay && todayDate-messagesentdate > 0){
+	                return true;
+	            }else{
+	            	return false;
+	            }
+	    };
+    }
   }; 
 });

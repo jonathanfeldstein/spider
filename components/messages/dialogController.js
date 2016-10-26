@@ -2,6 +2,8 @@ app.controller('DialogController', ['$scope','DialogService','MessagesService', 
 
 function DialogController($scope, DialogService, MessagesService, $timeout) {
 
+        $scope.oneHour = 60 * 60 * 1000;
+
   //Get all Contacts (Contactbook)
     DialogService.getDialog()
       .success(function(story){
