@@ -1,3 +1,9 @@
+/* GENERAL **********************************************/
+/* MESSAGES *********************************************/
+/* Light Yellow */
+/* Dark Yellow **/
+/* Light Blue ***/
+/* Dark Blue ****/
 body {
   font-family: 'Open Sans', sans-serif;
   overflow-x: hidden; }
@@ -196,7 +202,7 @@ div[data-toggle="buttons"] label {
     height: 80%;
     opacity: 1; }
     #team .person:hover {
-      border-color: #f1f1f1; }
+      border-color: #dddddd; }
 
 #location {
   background-image: url("../res/bg/location-288.jpg"); }
@@ -298,7 +304,7 @@ div[data-toggle="buttons"] label {
 
 /*Dialog helpers */
 .longMessageThread, .shortMessageThread {
-  border-bottom: 1px solid #ccccb3;
+  border-bottom: 1px solid #dddddd;
   display: inline-block;
   min-width: 30vw; }
 
@@ -313,7 +319,7 @@ div[data-toggle="buttons"] label {
 .userSentence, .interlocutorSentence {
   margin-top: 5px;
   display: inline-block;
-  border: 1px solid #ccccb3;
+  border: 1px solid #dddddd;
   border-radius: 3px;
   max-width: 50vw;
   padding: 5px; }
@@ -328,7 +334,7 @@ div[data-toggle="buttons"] label {
   bottom: 0;
   right: 0;
   background-color: white;
-  border-top: 1px solid #ccccb3;
+  border-top: 1px solid #dddddd;
   overflow-y: scroll;
   overflow-x: hidden; }
 
@@ -340,7 +346,7 @@ div[data-toggle="buttons"] label {
   left: 0;
   top: 0;
   padding-top: 110px;
-  border-right: 1px solid #ccccb3;
+  border-right: 1px solid #dddddd;
   height: 100%;
   overflow: scroll;
   overflow-x: hidden;
@@ -363,7 +369,7 @@ div .dialogThread {
   width: 100%; }
 
 .userSentence {
-  background-color: #ccccb3;
+  background-color: #dddddd;
   position: relative;
   margin-right: 10px;
   text-align: left; }

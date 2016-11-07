@@ -1,6 +1,6 @@
 /*Dialog helpers */
 %messageInboxDialog{
-	border-bottom: 1px solid #ccccb3;
+	border-bottom: 1px solid $standard-grey;
 	display: inline-block;
 	min-width: 30vw;
 }
@@ -15,7 +15,7 @@
 %generalSentence{
 	margin-top: 5px;
 	display: inline-block;
-	border: 1px solid #ccccb3;
+	border: 1px solid $standard-grey;
 	border-radius: 3px;
 	max-width:50vw;
 	padding:5px;
@@ -30,7 +30,7 @@
 	bottom: 0;
 	right: 0;
 	background-color: white;
-	border-top: 1px solid #ccccb3;
+	border-top: 1px solid $standard-grey;
 	overflow-y: scroll;
 	overflow-x: hidden;
 }
@@ -42,7 +42,7 @@
 	left: 0;
 	top: 0;
 	padding-top: 110px;
-	border-right: 1px solid #ccccb3;
+	border-right: 1px solid $standard-grey;
 	height: 100%;
 	overflow: scroll;
 	overflow-x: hidden;
@@ -54,11 +54,11 @@ div .dialogThread{
 	margin: 0;
 }
 .longMessageThread{
-background-color: #d0e2fb;
+background-color: $long-message-bg;
 	@extend %messageInboxDialog;
 }
 .shortMessageThread{
-background-color: #fafcb6;
+background-color: $short-message-bg;
 	@extend %messageInboxDialog;
 }
 
@@ -72,7 +72,7 @@ background-color: #fafcb6;
 }
 
 .userSentence{
-	background-color:  #ccccb3;
+	background-color:  $standard-grey;
 	position: relative;
 	margin-right: 10px;
 	text-align: left;
