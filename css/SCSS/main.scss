@@ -1,0 +1,487 @@
+/*Inbox helpers */
+%messageInbox{
+	position: relative;
+  	display: block;
+  	margin-bottom: -1px;
+  	border: 1px solid #dddddd;
+}
+%paddingMessageMobile{
+	padding-left: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;	
+}
+/*Dialog helpers */
+%messageInboxDialog{
+	border-bottom: 1px solid #ccccb3;
+	display: inline-block;
+	min-width: 30vw;
+}
+%dialogContainerGeneral{
+	margin-right: 0;
+	margin-left: auto;
+	position: absolute;
+	right: 0px;
+	overflow: scroll;
+	height: 70vh;
+}
+%generalSentence{
+	margin-top: 5px;
+	display: inline-block;
+	border: 1px solid #ccccb3;
+	border-radius: 3px;
+	max-width:50vw;
+	padding:5px;
+}
+%sendToDialog{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	max-height: 40vh;
+	padding-top: 10px;
+	padding-left: 15px; 
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	background-color: white;
+	border-top: 1px solid #ccccb3;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+@mixin businessStripes($darkColor,$lightColor){
+	background: repeating-linear-gradient(
+  		-45deg,
+  		$darkColor,
+  		$darkColor 10px,
+  		$lightColor 10px,
+  		$lightColor 20px
+	);
+}
+body {
+	font-family: 'Open Sans', sans-serif;
+	overflow-x: hidden;
+}
+/******************************************************/
+/* HELP CLASSES */
+
+
+.page-full {
+	width: 100vw;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+.page-full>div{
+	flex-grow: 1;
+}
+
+.bg-img {
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.content-ftr {
+	align-self: flex-end;
+	padding: 1em;
+	box-shadow: 0 -1em 3em -.5em rgba(0,0,0,.5);
+	color: #eee;
+}
+
+.alertCont {
+	position: fixed;
+	z-index: 10000;
+	left: 50%;
+	top: 10px;
+	transform: translateX(-50%);
+}
+.bottom-pos{
+	position: relative;
+	margin-top:80vh;
+}
+.spacer {
+	height: 25px;
+}
+
+.spacersmall {
+	height: 10px;
+}
+/******************************************************/
+/* MODALs GENERAL *************************************/
+
+.modal-header {
+    background-color: #333;
+    color: #fff !important;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.modal-header, .modal-body {
+    padding: 3em;
+}
+
+/******************************************************/
+/* Homepage (incl. Company, Products) *****************/
+#home {
+	background-color: rgba(255, 255, 255, .8);
+	padding: 2em;
+	//display: none;
+}
+#general {
+	background-image: url('../res/bg/general-2880.jpg');
+}
+#infogeneral {
+	background-image: url('../res/bg/info-2880.jpg');
+}
+#team {
+	background-image: url('../res/bg/team-1920.jpg');
+	.container {
+    padding: 2em;
+	}
+	.person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80%;
+    opacity: 1;
+	&:hover{
+	    border-color: #f1f1f1;
+	}
+	}
+}
+#location {
+	background-image: url('../res/bg/location-288.jpg');
+}
+
+#products img{
+	width: 80%;
+	margin: 10%;
+	.description {
+		margin: 10%;
+	}
+}
+/******************************************************/
+/* Contactbook ****************************************/
+
+/* Searchbar */
+/* All buttons */
+#searchbar{
+	background-color: #f2f2f2;
+	display: block;
+	margin-top: 50px;
+	position:fixed;
+	width: 100vw;
+	z-index: 1;
+	font-weight: bold;
+	
+	div{
+		position: relative;
+		display: inline-block;
+		padding: 1vw 1vw;
+		line-height: 20px;
+		font-family: Helvetica;
+		font-weight: lighter;
+
+	}
+	li div{
+		padding: auto 0 auto 2vw;
+		&:hover{
+			background-color: #ccc;
+			text-decoration: none;
+
+		}
+	}
+	.active  {
+  		background-color: #ccc;
+	}
+	.letters{
+		padding: 0 7px 0 7px;
+		font-family: Helvetica;
+  		font-weight: lighter;
+	}
+
+
+}
+/* Standardbutton (modal-radios, sub-navbar*/
+div[data-toggle="buttons"] label {
+display: inline-block;
+line-height: 2em;
+vertical-align: top;
+cursor: pointer;
+background-color: white;
+border: 1px solid #c8c8c8;
+color: #c8c8c8;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+-o-user-select: none;
+user-select: none;
+}
+
+/*Order By Button */
+
+.dropdown .dropdown-menu{
+	min-width: 140px;
+	text-align: center;
+
+}
+
+/* Buttons to order alphabetically */
+.filter{
+	margin-top: 15px;
+}
+
+
+/* Searchbox */
+.searchButton{
+	width: 25vw;
+}
+#searchContactBox{
+	margin-top: 5px;
+	width: 100%;
+	min-height: 35px;
+}
+
+/* Single Contact display*/
+.userContact{
+	font-size: 20px;
+}
+.additionalInformation{
+	display: none;
+	font-weight: bold;
+	.details{
+		font-weight: normal;
+	}
+}
+.additionalInformationMobile{
+	display: block;
+	font-weight: bold;
+	.details{
+		font-weight: normal;
+	}
+}
+
+.grow {
+    height: 50px;
+    padding-top: 10px;
+	&:hover > .userContact{
+		text-decoration: underline;
+	}
+	&:hover > .additionalInformation{
+		display: block;
+	}
+}
+
+
+
+/* MODALs Contact Complete Information****************/
+.contact-total span{
+	font-weight: bold;
+	.contactPic img{
+		max-width: 5vw;
+	}
+}
+/* MODALs Contact Add Contact************************/
+/* Mr., Mrs. Prof... */
+.gettitel{
+	min-width: 100px;
+}
+/*****************************************************/
+/* Inbox *********************************************/
+#inboxNavigation{
+	background-color: #f2f2f2;
+	display: block;
+	margin-top: 50px;
+	position:fixed;
+	width: 100vw;
+	z-index: 3;
+	font-weight: bold;
+	div{
+		position: relative;
+		display: inline-block;
+		padding: 8px 0.7vw;
+		line-height: 20px;
+		font-family: Helvetica;
+		font-weight: lighter;
+	}
+	#newMessageButton{
+		padding: 2px 12px;
+		line-height: 2em;
+		vertical-align: top;
+		cursor: pointer;
+		background-color: white;
+		border: 1px solid #c8c8c8;
+		color: #c8c8c8;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		-o-user-select: none;
+		user-select: none;
+	}
+	.messagenavbutton{
+		min-width: 70px;
+		padding: 2px 1vw;
+	}
+	.messagenavbuttonMobile{
+		min-width: 8vw;
+		padding: 2px 2px;
+	}
+	.messagenavbuttonTablet{
+		min-width: 5vw;
+		padding: 2px 2px;
+	}
+	#searchMessageBox{
+		min-width: 30vw;
+		line-height: 22px;
+	}
+}
+
+
+/*Messages in Inbox (short/long;business/private;Desktop/Mobile)*/
+.shortMessage{
+background-color: #fafcb6;
+  padding: 10px 15px;
+  @extend %messageInbox;
+}
+.shortMessageMobile{
+
+background-color: #fafcb6;
+  	height: 50px;
+	@extend %messageInbox;
+	@extend %paddingMessageMobile;
+}
+.longMessage{
+background-color: #d0e2fb;
+  padding: 10px 15px;
+	@extend %messageInbox;
+}
+.longMessageMobile{
+background-color: #d0e2fb;
+  	height: 50px;
+	@extend %messageInbox;
+	@extend %paddingMessageMobile;
+}
+.shortMessageBusiness{
+	@include businessStripes(#fafcb6,#f6fa85);
+  padding: 10px 15px;
+	@extend %messageInbox;
+}
+.shortMessageBusinessMobile{
+	@include businessStripes(#fafcb6,#f6fa85);
+  	height: 50px;
+	@extend %messageInbox;
+	@extend %paddingMessageMobile;
+}
+.longMessageBusiness{
+	@include businessStripes(#d0e2fb,#a1c5f7);
+  padding: 10px 15px;
+	@extend %messageInbox;
+}
+.longMessageBusinessMobile{
+	@include businessStripes(#d0e2fb,#a1c5f7);
+  	height: 50px;
+	@extend %messageInbox;
+	@extend %paddingMessageMobile;
+}
+/* Display Message in Inbox correctly */
+.messageContainer{
+	height: 25px;
+	width: 100%;
+	div{
+		font-size: 15px;
+	}
+	.infoRow{
+		width:100%;
+		.infoCellLarge{
+			width: 65%;
+			display: inline-block;
+		}
+		.infoCellSmall{
+			width: 25%;
+			display: inline-block;
+		}
+		.logoMobile{
+			width:5%;
+			display: inline-block;
+		}
+	}
+	.contentRow{
+		width: 100%;
+	}
+}
+/*Message Modal*/
+.messageFooter{
+	max-height: 30px;
+}
+/************************************************/
+/*DIALOG*****************************************/
+.threadContainer{
+	width: 30vw;
+	position: absolute;
+	left: 0;
+	top: 0;
+	padding-top: 110px;
+	border-right: 1px solid #ccccb3;
+	height: 100%;
+	overflow: scroll;
+	overflow-x: hidden;
+	z-index: 2;
+
+}
+div .dialogThread{
+	padding-bottom: 0;
+	margin: 0;
+}
+.longMessageThread{
+background-color: #d0e2fb;
+	@extend %messageInboxDialog;
+}
+.shortMessageThread{
+background-color: #fafcb6;
+	@extend %messageInboxDialog;
+}
+
+#dialogContainer{
+	width: 70vw;
+	@extend %dialogContainerGeneral;
+}
+#dialogContainerMobile{
+	width: 100%;
+	@extend %dialogContainerGeneral;
+}
+
+.userSentence{
+	background-color:  #ccccb3;
+	position: relative;
+	margin-right: 10px;
+	text-align: left;
+	@extend %generalSentence;
+}
+.interlocutorSentence{
+	background-color:  white;
+	margin-left: 10px;
+	@extend %generalSentence;
+
+}
+.dialogDate{
+	font-style: italic;
+	font-size: 12px;
+	color: #7a7a52;
+}
+
+.main #sendToThreadBox{
+	width: 70vw;
+	@extend %sendToDialog;
+}
+
+.main #sendToThreadBoxMobile{
+	width: 100%;
+	@extend %sendToDialog;
+}
+#sendButton{
+	min-width: 100px;
+}
+#messageInThread{
+	min-width: 100%;
+
+}

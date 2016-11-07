@@ -11,9 +11,8 @@
       </button>
     </div>
     </div>
-    <div class="collapse navbar-collapse" id="messagebar">
+    <div class="collapse navbar-collapse" id="inboxNavigation">
       <!-- Different buttons of navigationbar -->
-     <ul class="nav navbar-nav">
           <div class="btn-group btn-group-horizontal button-container">
                           <label class="btn title-button" id="newMessageButton">
                               <span  class="messagenavbutton" data-toggle="modal" data-target="#newMessagemodal">New</span>
@@ -50,12 +49,11 @@
                               <span>Chat</span>
                           </label>
           </div>
-          <div style="position:fixed; right:15px">
+          <div style="position:fixed; right:5px">
                               <span class="searchButton" data-target="#searchMessage">
                                  <input type="text" id="searchMessageBox" ng-click="activeLetter = []; showcontacts=contacts" ng-model="search.$" placeholder="Search" name="search">
                               </span>
           </div>
-      </ul>
     </div>
 </nav>
   <!-- Directive for modal-form to add Contact -->

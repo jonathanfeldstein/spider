@@ -15,7 +15,6 @@
       <!-- Different buttons of navigationbar -->
       <ul class="nav navbar-nav">
         <li><div id="addButton" data-toggle="modal" data-target="#addContactmodal">Add</div></li>
-        <li><a class="divider"></a></li>
         <li class="dropdown">
                   <div class="dropdown-toggle" data-toggle="dropdown">Order By<span class="caret"></span></div>                     
                   <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
@@ -27,14 +26,12 @@
                         <span class="sortorder" ng-show="propertyName === 'nextmeeting'"></span>
                   </ul>
                 </li>
-        <li><a class="divider"></a></li>
         <li>
             <ul class="filter">
                 <span class="letters" ng-click="activateLetter('')" ng-class="{'active':activeLetter==''}">ALL</span>
                 <span class="letters" ng-repeat="letter in alphabet track by $index " ng-click="activateLetter(letter)" ng-class="{'active':letter==activeLetter}">{{letter}}</span>
             </ul>
         </li>
-        <li><a class="divider"></a></li>
         <li class="searchButton">
           <span data-target="#searchContact">
              <input type="text" id="searchContactBox" ng-click="activeLetter = []; showcontacts=contacts" ng-model="search.$" placeholder="Search (firstname, lastname, message)" name="search">
