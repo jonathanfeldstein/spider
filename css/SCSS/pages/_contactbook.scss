@@ -1,0 +1,29 @@
+/* Single Contact display*/
+.userContact{
+	font-size: 20px;
+}
+.additionalInformation{
+	display: none;
+	font-weight: bold;
+	.details{
+		font-weight: normal;
+	}
+}
+.additionalInformationMobile{
+	display: block;
+	font-weight: bold;
+	.details{
+		font-weight: normal;
+	}
+}
+
+.grow {
+    height: 50px;
+    padding-top: 10px;
+	&:hover > .userContact{
+		text-decoration: underline;
+	}
+	&:hover > .additionalInformation{
+		display: block;
+	}
+}

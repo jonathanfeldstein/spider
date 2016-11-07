@@ -1,0 +1,40 @@
+/******************************************************/
+/* Homepage (incl. Company, Products) *****************/
+#home {
+	background-color: rgba(255, 255, 255, .8);
+	padding: 2em;
+	//display: none;
+}
+#general {
+	background-image: url('../res/bg/general-2880.jpg');
+}
+#infogeneral {
+	background-image: url('../res/bg/info-2880.jpg');
+}
+#team {
+	background-image: url('../res/bg/team-1920.jpg');
+	.container {
+    padding: 2em;
+	}
+	.person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80%;
+    opacity: 1;
+	&:hover{
+	    border-color: #f1f1f1;
+	}
+	}
+}
+#location {
+	background-image: url('../res/bg/location-288.jpg');
+}
+
+#products img{
+	width: 80%;
+	margin: 10%;
+	.description {
+		margin: 10%;
+	}
+}

@@ -5,7 +5,7 @@
     {
       "id": 787393286,
       "sentdate": "2016-10-21T08:44:24.597Z",
-      "subject": "DiniMueter",
+      "subject": "Häuser",
       "postman": "WhatsApp",
       "prosa": "Hello."
 
@@ -13,35 +13,35 @@
    {
       "id": 787393286,
       "sentdate": "2016-10-21T08:44:24.597Z",
-      "subject": "DiniMueter",
-      "postman": "WhatsApp",
+      "subject": "Wasserfall",
+      "postman": "Mail",
       "prosa": "Wazz up."
 
     },
     {
       "id": 787542589,
       "sentdate": "2016-10-21T08:44:24.597Z",
-      "subject": "DiniMueter",
-      "postman": "WhatsApp",
-      "prosa": "Never learned how to use questionmarks?"
+      "subject": "Gute Nachricht",
+      "postman": "Contactify",
+      "prosa": "Life is great."
 
 
     },
     {
       "id": 787393286,
       "sentdate": 1420563600000,
-      "subject": "DiniMueter",
+      "subject": "Kein Betreff",
       "postman": "WhatsApp",
-      "prosa": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      "prosa": "Did you try Contactify?"
 
 
     },
     {
       "id": 787393286,
       "sentdate": 1420563600000,
-      "subject": "DiniMueter",
-      "postman": "WhatsApp",
-      "prosa": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      "subject": "Schlechte Nachricht",
+      "postman": "Mail",
+      "prosa": "I learned some latin."
 
 
     },
@@ -49,7 +49,7 @@
       "id": 787393286,
       "sentdate": 1420563600000,
       "subject": "DiniMueter",
-      "postman": "WhatsApp",
+      "postman": "Facebook",
       "prosa": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 
 

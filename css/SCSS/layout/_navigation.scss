@@ -1,0 +1,127 @@
+/******************************************************/
+/* Contactbook ****************************************/
+#searchbar{
+	background-color: #f2f2f2;
+	display: block;
+	margin-top: 50px;
+	position:fixed;
+	width: 100vw;
+	z-index: 1;
+	font-weight: bold;
+	
+	div{
+		position: relative;
+		display: inline-block;
+		padding: 1vw 1vw;
+		line-height: 20px;
+		font-family: Helvetica;
+		font-weight: lighter;
+
+	}
+	li div{
+		padding: auto 0 auto 2vw;
+		&:hover{
+			background-color: #ccc;
+			text-decoration: none;
+
+		}
+	}
+	.active  {
+  		background-color: #ccc;
+	}
+	.letters{
+		padding: 0 7px 0 7px;
+		font-family: Helvetica;
+  		font-weight: lighter;
+	}
+
+
+}
+/* Standardbutton (modal-radios, sub-navbar*/
+div[data-toggle="buttons"] label {
+display: inline-block;
+line-height: 2em;
+vertical-align: top;
+cursor: pointer;
+background-color: white;
+border: 1px solid #c8c8c8;
+color: #c8c8c8;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+-o-user-select: none;
+user-select: none;
+}
+
+/*Order By Button */
+
+.dropdown .dropdown-menu{
+	min-width: 140px;
+	text-align: center;
+
+}
+
+/* Buttons to order alphabetically */
+.filter{
+	margin-top: 15px;
+}
+
+
+/* Searchbox */
+.searchButton{
+	width: 25vw;
+}
+#searchContactBox{
+	margin-top: 5px;
+	width: 100%;
+	min-height: 35px;
+}
+/*****************************************************/
+/* Inbox *********************************************/
+#inboxNavigation{
+	background-color: #f2f2f2;
+	display: block;
+	margin-top: 50px;
+	position:fixed;
+	width: 100vw;
+	z-index: 3;
+	font-weight: bold;
+	div{
+		position: relative;
+		display: inline-block;
+		padding: 8px 0.7vw;
+		line-height: 20px;
+		font-family: Helvetica;
+		font-weight: lighter;
+	}
+	#newMessageButton{
+		padding: 2px 12px;
+		line-height: 2em;
+		vertical-align: top;
+		cursor: pointer;
+		background-color: white;
+		border: 1px solid #c8c8c8;
+		color: #c8c8c8;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		-o-user-select: none;
+		user-select: none;
+	}
+	.messagenavbutton{
+		min-width: 70px;
+		padding: 2px 1vw;
+	}
+	.messagenavbuttonMobile{
+		min-width: 8vw;
+		padding: 2px 2px;
+	}
+	.messagenavbuttonTablet{
+		min-width: 5vw;
+		padding: 2px 2px;
+	}
+	#searchMessageBox{
+		min-width: 30vw;
+		line-height: 22px;
+	}
+}

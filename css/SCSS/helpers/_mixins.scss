@@ -1,0 +1,9 @@
+@mixin businessStripes($darkColor,$lightColor){
+	background: repeating-linear-gradient(
+  		-45deg,
+  		$darkColor,
+  		$darkColor 10px,
+  		$lightColor 10px,
+  		$lightColor 20px
+	);
+}

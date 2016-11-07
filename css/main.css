@@ -1,51 +1,3 @@
-/*Inbox helpers */
-.shortMessage, .shortMessageMobile, .longMessage, .longMessageMobile, .shortMessageBusiness, .shortMessageBusinessMobile, .longMessageBusiness, .longMessageBusinessMobile {
-  position: relative;
-  display: block;
-  margin-bottom: -1px;
-  border: 1px solid #dddddd; }
-
-.shortMessageMobile, .longMessageMobile, .shortMessageBusinessMobile, .longMessageBusinessMobile {
-  padding-left: 5px;
-  padding-top: 5px;
-  padding-bottom: 5px; }
-
-/*Dialog helpers */
-.longMessageThread, .shortMessageThread {
-  border-bottom: 1px solid #ccccb3;
-  display: inline-block;
-  min-width: 30vw; }
-
-#dialogContainer, #dialogContainerMobile {
-  margin-right: 0;
-  margin-left: auto;
-  position: absolute;
-  right: 0px;
-  overflow: scroll;
-  height: 70vh; }
-
-.userSentence, .interlocutorSentence {
-  margin-top: 5px;
-  display: inline-block;
-  border: 1px solid #ccccb3;
-  border-radius: 3px;
-  max-width: 50vw;
-  padding: 5px; }
-
-.main #sendToThreadBox, .main #sendToThreadBoxMobile {
-  padding-top: 5px;
-  padding-bottom: 5px;
-  max-height: 40vh;
-  padding-top: 10px;
-  padding-left: 15px;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  background-color: white;
-  border-top: 1px solid #ccccb3;
-  overflow-y: scroll;
-  overflow-x: hidden; }
-
 body {
   font-family: 'Open Sans', sans-serif;
   overflow-x: hidden; }
@@ -99,47 +51,25 @@ body {
   text-align: center;
   font-size: 1.2em; }
 
-.modal-header, .modal-body {
-  padding: 3em; }
+/* MODALs CONTACTBOOK ********************************/
+/* Add Contact **************************************/
+/* Mr., Mrs. Prof... */
+.gettitel {
+  min-width: 100px; }
 
-/******************************************************/
-/* Homepage (incl. Company, Products) *****************/
-#home {
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 2em; }
+/* Complete Information ******************************/
+.contact-total span {
+  font-weight: bold; }
+  .contact-total span .contactPic img {
+    max-width: 5vw; }
 
-#general {
-  background-image: url("../res/bg/general-2880.jpg"); }
-
-#infogeneral {
-  background-image: url("../res/bg/info-2880.jpg"); }
-
-#team {
-  background-image: url("../res/bg/team-1920.jpg"); }
-  #team .container {
-    padding: 2em; }
-  #team .person {
-    border: 10px solid transparent;
-    margin-bottom: 25px;
-    width: 80%;
-    height: 80%;
-    opacity: 1; }
-    #team .person:hover {
-      border-color: #f1f1f1; }
-
-#location {
-  background-image: url("../res/bg/location-288.jpg"); }
-
-#products img {
-  width: 80%;
-  margin: 10%; }
-  #products img .description {
-    margin: 10%; }
+/* MODALs INBOX **************************************/
+/* New Message Modal *********************************/
+.messageFooter {
+  max-height: 30px; }
 
 /******************************************************/
 /* Contactbook ****************************************/
-/* Searchbar */
-/* All buttons */
 #searchbar {
   background-color: #f2f2f2;
   display: block;
@@ -200,41 +130,6 @@ div[data-toggle="buttons"] label {
   width: 100%;
   min-height: 35px; }
 
-/* Single Contact display*/
-.userContact {
-  font-size: 20px; }
-
-.additionalInformation {
-  display: none;
-  font-weight: bold; }
-  .additionalInformation .details {
-    font-weight: normal; }
-
-.additionalInformationMobile {
-  display: block;
-  font-weight: bold; }
-  .additionalInformationMobile .details {
-    font-weight: normal; }
-
-.grow {
-  height: 50px;
-  padding-top: 10px; }
-  .grow:hover > .userContact {
-    text-decoration: underline; }
-  .grow:hover > .additionalInformation {
-    display: block; }
-
-/* MODALs Contact Complete Information****************/
-.contact-total span {
-  font-weight: bold; }
-  .contact-total span .contactPic img {
-    max-width: 5vw; }
-
-/* MODALs Contact Add Contact+++++++++****************/
-/* Mr., Mrs. Prof... */
-.gettitel {
-  min-width: 100px; }
-
 /*****************************************************/
 /* Inbox *********************************************/
 #inboxNavigation {
@@ -277,6 +172,76 @@ div[data-toggle="buttons"] label {
   #inboxNavigation #searchMessageBox {
     min-width: 30vw;
     line-height: 22px; }
+
+/******************************************************/
+/* Homepage (incl. Company, Products) *****************/
+#home {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 2em; }
+
+#general {
+  background-image: url("../res/bg/general-2880.jpg"); }
+
+#infogeneral {
+  background-image: url("../res/bg/info-2880.jpg"); }
+
+#team {
+  background-image: url("../res/bg/team-1920.jpg"); }
+  #team .container {
+    padding: 2em; }
+  #team .person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80%;
+    opacity: 1; }
+    #team .person:hover {
+      border-color: #f1f1f1; }
+
+#location {
+  background-image: url("../res/bg/location-288.jpg"); }
+
+#products img {
+  width: 80%;
+  margin: 10%; }
+  #products img .description {
+    margin: 10%; }
+
+/* Single Contact display*/
+.userContact {
+  font-size: 20px; }
+
+.additionalInformation {
+  display: none;
+  font-weight: bold; }
+  .additionalInformation .details {
+    font-weight: normal; }
+
+.additionalInformationMobile {
+  display: block;
+  font-weight: bold; }
+  .additionalInformationMobile .details {
+    font-weight: normal; }
+
+.grow {
+  height: 50px;
+  padding-top: 10px; }
+  .grow:hover > .userContact {
+    text-decoration: underline; }
+  .grow:hover > .additionalInformation {
+    display: block; }
+
+/*Inbox helpers */
+.shortMessage, .shortMessageMobile, .longMessage, .longMessageMobile, .shortMessageBusiness, .shortMessageBusinessMobile, .longMessageBusiness, .longMessageBusinessMobile {
+  position: relative;
+  display: block;
+  margin-bottom: -1px;
+  border: 1px solid #dddddd; }
+
+.shortMessageMobile, .longMessageMobile, .shortMessageBusinessMobile, .longMessageBusinessMobile {
+  padding-left: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px; }
 
 /*Messages in Inbox (short/long;business/private;Desktop/Mobile)*/
 .shortMessage {
@@ -331,9 +296,41 @@ div[data-toggle="buttons"] label {
   .messageContainer .contentRow {
     width: 100%; }
 
-/*Message Modal*/
-.messageFooter {
-  max-height: 30px; }
+/*Dialog helpers */
+.longMessageThread, .shortMessageThread {
+  border-bottom: 1px solid #ccccb3;
+  display: inline-block;
+  min-width: 30vw; }
+
+#dialogContainer, #dialogContainerMobile {
+  margin-right: 0;
+  margin-left: auto;
+  position: absolute;
+  right: 0px;
+  overflow: scroll;
+  height: 70vh; }
+
+.userSentence, .interlocutorSentence {
+  margin-top: 5px;
+  display: inline-block;
+  border: 1px solid #ccccb3;
+  border-radius: 3px;
+  max-width: 50vw;
+  padding: 5px; }
+
+.main #sendToThreadBox, .main #sendToThreadBoxMobile {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  max-height: 40vh;
+  padding-top: 10px;
+  padding-left: 15px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: white;
+  border-top: 1px solid #ccccb3;
+  overflow-y: scroll;
+  overflow-x: hidden; }
 
 /************************************************/
 /*DIALOG*****************************************/

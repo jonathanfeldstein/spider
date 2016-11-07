@@ -1,0 +1,29 @@
+/******************************************************/
+/* MODALs GENERAL *************************************/
+
+.modal-header {
+    background-color: #333;
+    color: #fff !important;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+/* MODALs CONTACTBOOK ********************************/
+/* Add Contact **************************************/
+/* Mr., Mrs. Prof... */
+.gettitel{
+	min-width: 100px;
+}
+/* Complete Information ******************************/
+.contact-total span{
+	font-weight: bold;
+	.contactPic img{
+		max-width: 5vw;
+	}
+}
+
+/* MODALs INBOX **************************************/
+/* New Message Modal *********************************/
+.messageFooter{
+	max-height: 30px;
+}
