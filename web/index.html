@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+        <title>Contactify</title>
+		
+    <!-- General Setting -->   
+    		<meta charset='utf-8'>
+    		<meta name='viewport' content='width=device-width, initial-scale=1'>
+		    
+        <!-- Tab Icon -->
+		    <link rel='icon' type='image/png' href='res/logo/logo_tab.png'>
+		
+    <!-- Include Stylesheets -->
+    		<link rel='stylesheet' type='text/css' href='css/main.css'>
+
+		
+    <!-- Include Bootstrap and jQuery -->
+        <link rel='stylesheet' type='text/css' href='bootstrap/css/bootstrap.min.css'>
+      <!-- CSS Sheet to customize bootstrap -->
+        <link rel='stylesheet' type='text/css' href='bootstrap/css/custom.css'>
+
+    		<script src="node_modules/jquery/dist/jquery.js"></script>
+    		<script src='bootstrap/js/bootstrap.min.js'></script> 
+
+		<!-- Include General Angular -->
+        <script src="node_modules/angular/angular.js"></script>
+        <script src="node_modules/angular-animate/angular-animate.js"></script>
+        <script src="node_modules/angular-aria/angular-aria.js"></script>
+        <script src="node_modules/angular-material/angular-material.js"></script>
+        <script src="node_modules/angular-route/angular-route.js"></script>
+        <script src="node_modules/angular-material-icons/angular-material-icons.js"></script>
+        <script src="node_modules/moment/moment.js"></script>
+        <script src="node_modules/angular-moment/angular-moment.js"></script>
+        <script src="node_modules/lrInfiniteScroll/lrInfiniteScroll.js"></script>
+        <script src="node_modules/angularjs-scroll-glue/src/scrollglue.js"></script>
+        <script src="node_modules/angular-responsive-master/src/responsive-directive.js"></script>
+    <!-- Include Own Angular -->
+        <script src='app.js'></script>
+
+        <script src="node_modules/custom-filters/reverseOrder.js"></script>
+    <!-- Angular for Home -->
+        <script src='components/home/homeController.js'></script>
+        <script src="components/home/companyController.js"></script>
+    <!-- Angular for Contacts -->
+    		<script src='components/contacts/contactsController.js'></script>
+    		<script src='components/contacts/contactInfo.js'></script>
+        <script src='components/contacts/contactInfoMobile.js'></script>
+        <script src='components/contacts/contactInfoTablet.js'></script>
+        <script src='components/contacts/contactTotal.js'></script>
+    		<script src='components/contacts/addContact.js'></script>
+        <script src='components/contacts/contactsService.js'></script>
+    <!-- Angular for Messages -->
+        <script src='components/messages/messagesController.js'></script>
+        <script src='components/messages/singleMessage.js'></script>
+        <script src='components/messages/singleMessageMobile.js'></script>
+        <script src='components/messages/singleMessageTablet.js'></script>
+        <script src='components/messages/newMessage.js'></script>
+        <script src='components/messages/messagesService.js'></script>
+    <!-- Angular for Dialog -->
+        <script src='components/messages/dialogController.js'></script>
+        <script src='components/messages/dialogService.js'></script>
+        <script src='components/messages/dialogMessage.js'></script>
+        <script src='components/messages/singleThread.js'></script>
+        <script src='components/messages/singleThreadTablet.js'></script>
+        <script src='components/messages/whenScroll.js'></script>
+        <script src='components/messages/resizeTextarea.js'></script>
+
+  </head>
+
+	<body ng-app='ProjectC'>
+      
+  <!-- Navigationbar -->
+      <nav class="navbar navbar-default navbar-fixed-top">
+      <!-- Complete bar -->
+        <div class="container-fluid">
+          
+          <div class="navbar-header">
+            <!-- Button to toggle together for SMALL Devices --> 
+        	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-main">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span> 
+              </button>
+            <!-- Company logo = Home Button -->
+              <div class="homebutton">
+                <a class="navbar-brand" href="#/home"><img src="res/logo/main-450.png"/></a>
+              </div>
+
+          </div>
+          
+          <div class="collapse navbar-collapse" id="navbar-main">
+            
+            <!-- Company Information Navigation -->
+            <div class="leftend">  
+              <ul class="nav navbar-nav navbar-left">
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown">COMPANY
+                    <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+                    <li><a href="#/company">General</a></li>
+                    <li><a href="#/company/#team">Team</a></li>
+                    <li><a href="#/company/#location">Contact us</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="rightend">
+              <ul class="nav navbar-nav navbar-right">
+                <li>
+                  <a href="#/contacts">Contactbook <span class="glyphicon glyphicon-book"></span></a>
+                </li>
+                <li>
+                  <a href="#/messages">Inbox <span class="glyphicon glyphicon-send"></span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+
+        </div>
+        <div ></div>
+      </nav>
+
+  
+  <!-- Content -->
+	   <div ng-view></div>
+
+	</body>
+</html>

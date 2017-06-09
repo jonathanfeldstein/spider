@@ -1,0 +1,84 @@
+/*Inbox helpers */
+%messageInbox{
+	position: relative;
+  	display: block;
+  	margin-bottom: -1px;
+  	border: 1px solid $standard-grey;
+}
+%paddingMessageMobile{
+	padding-left: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;	
+}
+/*Messages in Inbox (short/long;business/private;Desktop/Mobile)*/
+.shortMessage{
+background-color: $short-message-bg;
+  padding: 10px 15px;
+  @extend %messageInbox;
+}
+.shortMessageMobile{
+
+background-color: $short-message-bg;
+  	height: 50px;
+	@extend %messageInbox;
+	@extend %paddingMessageMobile;
+}
+.longMessage{
+background-color: $long-message-bg;
+  padding: 10px 15px;
+	@extend %messageInbox;
+}
+.longMessageMobile{
+background-color: $long-message-bg;
+  	height: 50px;
+	@extend %messageInbox;
+	@extend %paddingMessageMobile;
+}
+.shortMessageBusiness{
+	@include businessStripes($short-message-bg,$short-message-dark);
+  padding: 10px 15px;
+	@extend %messageInbox;
+}
+.shortMessageBusinessMobile{
+	@include businessStripes($short-message-bg,$short-message-dark);
+  	height: 50px;
+	@extend %messageInbox;
+	@extend %paddingMessageMobile;
+}
+.longMessageBusiness{
+	@include businessStripes($long-message-bg,$long-message-dark);
+  padding: 10px 15px;
+	@extend %messageInbox;
+}
+.longMessageBusinessMobile{
+	@include businessStripes($long-message-bg,$long-message-dark);
+  	height: 50px;
+	@extend %messageInbox;
+	@extend %paddingMessageMobile;
+}
+/* Display Message in Inbox correctly */
+.messageContainer{
+	height: 25px;
+	width: 100%;
+	div{
+		font-size: 15px;
+	}
+	.infoRow{
+		width:100%;
+		.infoCellLarge{
+			width: 65%;
+			display: inline-block;
+		}
+		.infoCellSmall{
+			width: 25%;
+			display: inline-block;
+		}
+		.logoMobile{
+			width:5%;
+			display: inline-block;
+		}
+	}
+	.contentRow{
+		width: 100%;
+	}
+}

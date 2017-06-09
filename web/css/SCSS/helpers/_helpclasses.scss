@@ -1,0 +1,53 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+	overflow-x: hidden;
+}
+/******************************************************/
+/* HELP CLASSES */
+
+
+.page-full {
+	width: 100vw;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+.page-full>div{
+	flex-grow: 1;
+}
+
+.bg-img {
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.content-ftr {
+	align-self: flex-end;
+	padding: 1em;
+	box-shadow: 0 -1em 3em -.5em rgba(0,0,0,.5);
+	color: #eee;
+}
+
+.alertCont {
+	position: fixed;
+	z-index: 10000;
+	left: 50%;
+	top: 10px;
+	transform: translateX(-50%);
+}
+
+.bottom-pos{
+	position: relative;
+	margin-top:80vh;
+}
+
+.spacer {
+	height: 25px;
+}
+
+.spacersmall {
+	height: 10px;
+}
